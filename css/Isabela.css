@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kulim Park', sans-serif;
+}
+
+body {
+    background-color: #1e1e1e;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    max-width: 90%;
+}
+
+/* Estilização dos ícones */
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(131, 97, 255, 0.73);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: 0.3s;
+    box-shadow: 0px 0px 15px rgba(131, 97, 255, 0.9);
+}
+
+.icon img {
+    width: 20px;
+    height: 25px;
+}
+
+/* Efeito de hover nos ícones */
+.icon:hover {
+    background-color: rgba(131, 97, 255, 1);
+    box-shadow: 0px 0px 20px rgba(131, 97, 255, 1);
+}
+
+/* Estilização dos textos */
+.sejabem {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.port {
+    font-size: 28px;
+    color: #8361FF;
+    font-weight: bold;
+}

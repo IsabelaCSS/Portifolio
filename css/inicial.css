@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css2?family=Kulim+Park&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Konkhmer+Sleokchher&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #272727;
+    color: white;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #232323;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.4);
+}
+
+
+.logo {
+    color: #8361FF;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    position: relative;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    color: #8361FF;
+    transition: 0.3s;
+
+}
+
+nav ul li a.active::after,
+nav ul li a:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: #8361FF;
+    transition: 0.3s;
+
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: calc(100vh - 0px);
+    padding: 0 70px;
+    flex-wrap: wrap;
+}
+
+.text {
+    max-width: 500px;
+    
+}
+.text h1 {
+    font-size: 55px;
+    margin-bottom: -35px;
+    font-family: 'Konkhmer Sleokchher';
+    text-shadow: 1px 4px 3px rgb(17, 17, 17);
+
+}
+
+.text h2 {
+    font-size: 60px;
+    margin-bottom: 1px;
+    font-family: 'Konkhmer Sleokchher';
+
+}
+
+.highlight {
+    color: #8361FF;
+    text-shadow: 1px 1px 3px rgba(131, 97, 255, 0.7);
+}
+
+.subtitle {
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-family: 'Kulim Park';
+}
+
+.description {
+    font-size: 17px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    font-family: 'Kulim Park';
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    text-decoration: none;
+    color: white;
+    border: 2px solid #8361FF;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: 0.3s;
+    box-shadow: 0px 0px 10px rgba(131, 97, 255, 0.5);
+    font-family: 'Kulim Park';
+}
+
+.btn:hover {
+    background-color: #8361FF;
+    color: #fff;
+    box-shadow: 0px 0px 20px rgba(131, 97, 255, 1);
+}
+
+.btn1 {
+    text-decoration: none;
+    color: white;
+    background-color: #8361FF;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-family: 'Kulim Park';
+}
+
+.btn1:hover {
+    background-color: #8361FF;
+    color: #fff;
+    box-shadow: 0px 0px 20px rgba(131, 97, 255, 1);
+    transition: 0.3s;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.sobre-mim {
+    padding: 0px 160px;
+    background-color: #272727;
+    color: white;
+}
+
+.titulo-sobre {
+    text-align: center;
+    font-size: 40px;
+    color: #8361FF;
+    margin-bottom: 5px;
+    text-shadow: 1px 4px 3px rgb(49, 33, 106);
+
+}
+
+.resumo {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 40px;
+    font-family: 'Kulim Park';
+
+}
+
+.sobre-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+
+.texto-sobre {
+    max-width: 700px;
+}
+
+.texto-sobre h3 {
+    font-size: 40px;
+    color: #8361FF;
+    text-shadow: 1px 4px 3px rgb(49, 33, 106);
+
+}
+
+.texto-sobre h1 {
+    font-size: 45px;
+    margin-bottom: 10px;
+    text-shadow: 1px 4px 3px rgb(17, 17, 17);
+
+}
+
+.descricao-sobre {
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    font-family: 'Kulim Park';
+
+}
+
+.foto-sobre img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    border: 3px solid #8361FF;
+    box-shadow: 0 0 20px rgba(131, 97, 255, 0.8);
+    object-fit: cover;
+}
+
+.estatisticas {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    gap: 30px;
+}
+
+.caixa {
+    background-color: #1c1c1c;
+    padding: 20px;
+    border-radius: 12px;
+    width: 800px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    }
+
+.caixa-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icone {
+    width: 45px;
+    height: 45px;
+    background-color: #111;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.icone img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+
+.caixa strong {
+    font-size: 30px;
+    color: white;
+    font-family: 'Kulim Park';
+}
+
+.caixa h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px 0 0 0;
+    font-family: 'Kulim Park';
+
+}
+
+.caixa p {
+    font-size: 14px;
+    color: #aaa;
+    margin: 0;
+    font-family: 'Kulim Park';
+
+}
+.portfolio {
+    padding: 50px 80px;
+    background-color: #272727;
+    color: white;
+}
+
+.titulo-portfolio {
+    text-align: center;
+    font-size: 40px;
+    color: #8361FF;
+    margin-bottom: 5px;
+    text-shadow: 1px 4px 3px rgb(49, 33, 106);
+}
+
+.filtros-portfolio {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 40px 0 30px 0;
+    flex-wrap: wrap;
+}
+
+.filtro {
+    background-color: #1c1c1c;
+    color: white;
+    border: none;
+    padding: 15px 160px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    justify-content: center;
+
+}
+
+.filtro.ativo {
+    background-color: #373737;
+    color: #8361FF;
+}
+
+.cards-portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 80px;
+    gap: 27px;
+}
+
+.card {
+    background-color: #1c1c1c;
+    border-radius: 10px;
+    padding: 15px;
+    width: 280px;
+    box-shadow: 0 0 10px rgba(131, 97, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.imagem-card {
+    background-color: #dcdcdc;
+    width: 100%;
+    height: 150px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 13px;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.botoes-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link-github {
+    color: #8361FF;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.btn-detalhes {
+    background-color: #2d2d2d;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .image img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .sobre-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .estatisticas {
+        flex-direction: column;
+    }
+
+    .caixa {
+        width: 100%;
+        height: auto;
+    }
+
+    .cards-portfolio {
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    .filtro {
+        padding: 10px 30px;
+    }
+}
