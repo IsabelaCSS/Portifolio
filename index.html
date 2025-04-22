@@ -21,7 +21,7 @@
     </nav>
 </header>
 
-<section class="content">
+<section class="content1">
     <div class="text">
         <h1><strong>Developer</strong></h1>
         <h2><span class="highlight">Web</span></h2>
@@ -95,75 +95,107 @@
     <h2 class="titulo-portfolio">Portfólio</h2>
     <p class="resumo">Todos os projetos e certificados.</p>
 
-    <div class="filtros-portfolio">
-        <button class="filtro"><span class="icone"><img src="img/codinic.png" height="30px" width="30px"></span> Projetos</button>
-        <button class="filtro"><span class="icone"><img src="img/certificado.png" height="30px" width="30px"></span> Certificado</button>
-        <button class="filtro"><span class="icone"><img src="img/voluntario.png" height="30px" width="30px"></span> Voluntariados</button>
-    </div>
-
-    <div class="cards-portfolio">
-        <div class="card">
-            <div class="imagem-card"></div>
-            <h3>Nome do Projeto</h3>
-            <p>Todos os projetos de desenvolvimento de sistema.</p>
-            <div class="botoes-card">
-                <a href="#" class="link-github">GitHub</a>
-                <a href="#" class="btn-detalhes">Detalhes</a>
-            </div>
+    <div class="tabs">
+        <div class="tab" onclick="showTab(event, 'projetos')">
+          <span class="icon"><img src="img/codport.png" height="20px" width="20px"></span>
+          <p>Projetos</p>
         </div>
-
-        <div class="card">
-            <div class="imagem-card"></div>
-            <h3>Nome do Projeto</h3>
-            <p>Todos os projetos de desenvolvimento de sistema.</p>
-            <div class="botoes-card">
-                <a href="#" class="link-github">GitHub</a>
-                <a href="#" class="btn-detalhes">Detalhes</a>
-            </div>
+        <div class="tab" onclick="showTab(event, 'certificados')">
+          <span class="icon"><img src="img/certport.png" height="20px" width="20px"></span>
+          <p>Certificado</p>
         </div>
-
-        <div class="card">
-            <div class="imagem-card"></div>
-            <h3>Nome do Projeto</h3>
-            <p>Todos os projetos de desenvolvimento de sistema.</p>
-            <div class="botoes-card">
-                <a href="#" class="link-github">GitHub</a>
-                <a href="#" class="btn-detalhes">Detalhes</a>
-            </div>
+        <div class="tab" onclick="showTab(event, 'voluntariados')">
+          <span class="icon"><img src="img/vonluntarioport.png" height="20px" width="20px"></span>
+          <p>Voluntariados</p>
         </div>
-
+      </div>
+    
+      <div class="content" id="projetos">
         <div class="card">
-            <div class="imagem-card"></div>
-            <h3>Nome do Projeto</h3>
-            <p>Todos os projetos de desenvolvimento de sistema.</p>
-            <div class="botoes-card">
-                <a href="#" class="link-github">GitHub</a>
-                <a href="#" class="btn-detalhes">Detalhes</a>
-            </div>
+          <div class="thumb"></div>
+          <h3>Nome do Projeto</h3>
+          <p>Todos os projetos de desenvolvimento de sistema.</p>
+          <div class="card-footer">
+            <a href="#">GitHub</a>
+            <button>Detalhes</button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="thumb"></div>
+          <h3>Nome do Projeto</h3>
+          <p>Todos os projetos de desenvolvimento de sistema.</p>
+          <div class="card-footer">
+            <a href="#">GitHub</a>
+            <button>Detalhes</button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="thumb"></div>
+          <h3>Nome do Projeto</h3>
+          <p>Todos os projetos de desenvolvimento de sistema.</p>
+          <div class="card-footer">
+            <a href="#">GitHub</a>
+            <button>Detalhes</button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="thumb"></div>
+          <h3>Nome do Projeto</h3>
+          <p>Todos os projetos de desenvolvimento de sistema.</p>
+          <div class="card-footer">
+            <a href="#">GitHub</a>
+            <button>Detalhes</button>
+          </div>
         </div>
         
-        <div class="card">
-            <div class="imagem-card"></div>
-            <h3>Nome do Projeto</h3>
-            <p>Todos os projetos de desenvolvimento de sistema.</p>
-            <div class="botoes-card">
-                <a href="#" class="link-github">GitHub</a>
-                <a href="#" class="btn-detalhes">Detalhes</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="imagem-card"></div>
-            <h3>Nome do Projeto</h3>
-            <p>Todos os projetos de desenvolvimento de sistema.</p>
-            <div class="botoes-card">
-                <a href="#" class="link-github">GitHub</a>
-                <a href="#" class="btn-detalhes">Detalhes</a>
-            </div>
-        </div>
+      </div>
+    
+      <div class="content" id="certificados">
+        <div class="cardCert">
+          <div class="thumb"></div>
+          <h3>Nome do Projeto</h3>
+        </div>      
+      </div>
     </div>
+
+    <div class="content" id="voluntariados">
+      <div class="cardVolun">
+          <div class="thumb"></div>
+          <h3>Nome do Projeto</h3>
+          <p>Todos os projetos de desenvolvimento de sistema.</p>
+          <div class="cardVolun-footer">
+            <button>Detalhes</button>
+          </div>
+        </div>
+      </div>
+
+      <script src="js/script.js"></script>
 </section>
 
+<section class="conhecimentos" id="conhecimentos">
+  <h2 class="titulo-conhecimento">Conhecimentos</h2>
+  <p class="resumo">Conhecimentos técnicos</p>
+  
+  <div class="carousel">
+    <div class="carousel-track">
+      <img src="img/dart.png" alt="Dart">
+      <img src="img/vscode.png" alt="VS Code">
+      <img src="img/visualstudio.png" alt="Visual Studio">
+      <img src="img/android.png" alt="Android">
+      <img src="img/word.png" alt="Word">
+      <img src="img/powerpoint.png" alt="PowerPoint">
+      <img src="img/github.png" alt="GitHub">
+      <img src="img/html.png" alt="HTML">
+      <img src="img/dart.png" alt="Dart">
+      <img src="img/vscode.png" alt="VS Code">
+      <img src="img/dart.png" alt="Dart">
+      <img src="img/vscode.png" alt="VS Code">
+      <img src="img/visualstudio.png" alt="Visual Studio">
+      <img src="img/android.png" alt="Android">
+    </div>
+  </div>
+  
+  </section>
 
 </body>
 </html>
