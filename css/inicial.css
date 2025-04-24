@@ -612,12 +612,22 @@ nav ul li a:hover::after {
     overflow: hidden;
   }
   
+  .carouselser .slide.active {
+    display: flex;
+  }
+  
   .slide {
+    display: none; /* Adicione isso para esconder os slides que não estão ativos */
     position: relative;
     height: 600px;
-    display: flex;
     align-items: center;
     justify-content: center;
+    background-size: cover;
+  }
+  
+  .slide.active {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
   }
   
   .slide-bg {
@@ -645,8 +655,17 @@ nav ul li a:hover::after {
     align-items: center;
     padding: 30px 40px;
     color: white;
+    transform: translateY(-0%);
+
   }
-  
+  .slide-content button {
+    padding: 10px 20px;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+  }
   .left h1 {
     font-size: 100px;
     font-weight: bold;
@@ -723,4 +742,31 @@ nav ul li a:hover::after {
     right: 10px;
   }
 
+  @media (max-width: 768px) {
+    .left h1 {
+      font-size: 40px;
+      margin-left: 20px;
+    }
+  
+    .left p {
+      font-size: 16px;
+      margin-left: 20px;
+    }
+  
+    .btnser {
+      bottom: 10px;
+      right: 20px;
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+  
+    .arrow {
+      font-size: 30px;
+    }
+  
+    .right {
+      padding-top: 200px;
+      padding-right: 10px;
+    }
+  }
   

@@ -1,80 +1,60 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Redireciona após 5 segundos (se necessário)
+  // Redirecionamento opcional
   setTimeout(() => {
-    // Remova esta linha se não quiser redirecionamento
     // window.location.href = "index.html";
   }, 5000);
 
-  // Script de filtros
+  // Filtros
   const botoesFiltro = document.querySelectorAll(".filtro");
   const cards = document.querySelectorAll(".card");
 
   botoesFiltro.forEach(botao => {
     botao.addEventListener("click", () => {
-      // Troca classe visual
       botoesFiltro.forEach(b => b.classList.remove("ativo"));
       botao.classList.add("ativo");
 
       const filtro = botao.getAttribute("data-filter");
-
       cards.forEach(card => {
-        if (filtro === "todos" || card.classList.contains(filtro)) {
-          card.style.display = "flex";
-        } else {
-          card.style.display = "none";
-        }
+        card.style.display = filtro === "todos" || card.classList.contains(filtro) ? "flex" : "none";
       });
     });
   });
+
+  // Tabs (se usar)
+  function showTab(evt, tabName) {
+    const contents = document.querySelectorAll('.content');
+    contents.forEach(content => content.classList.remove('active'));
+    const tabs = document.querySelectorAll('.tab');
+    tabs.forEach(tab => tab.classList.remove('active'));
+    evt.currentTarget.classList.add('active');
+    document.getElementById(tabName).classList.add('active');
+  }
+  window.showTab = showTab; // Deixa a função acessível no HTML onClick
+
+  // Carrossel de Serviços
+  const slides = document.querySelectorAll(".serviços .slide");
+  const leftArrow = document.querySelector(".serviços .arrow.left");
+  const rightArrow = document.querySelector(".serviços .arrow.right");
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove("active");
+      slide.style.display = i === index ? "flex" : "none";
+    });
+  }
+
+  if (leftArrow && rightArrow && slides.length > 0) {
+    leftArrow.addEventListener("click", () => {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(currentSlide);
+    });
+
+    rightArrow.addEventListener("click", () => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    });
+
+    showSlide(currentSlide); // Inicializa
+  }
 });
-
-// Script de abas (tabs) — se estiver usando abas com IDs e botões
-function showTab(evt, tabName) {
-  // Esconde todos os conteúdos
-  const contents = document.querySelectorAll('.content');
-  contents.forEach(content => {
-      content.classList.remove('active');
-  });
-
-  // Remove classe ativa de todas as tabs
-  const tabs = document.querySelectorAll('.tab');
-  tabs.forEach(tab => {
-      tab.classList.remove('active');
-  });
-
-  // Exibe a aba clicada e ativa o botão dela
-  document.getElementById(tabName).classList.add('active');
-  evt.currentTarget.classList.add('active');
-}
-const track = document.querySelector(".carousel-track");
-
-let isDragging = false;
-let startX;
-let scrollLeft;
-
-track.addEventListener("mousedown", (e) => {
-  isDragging = true;
-  track.classList.add("dragging");
-  startX = e.pageX - track.offsetLeft;
-  scrollLeft = track.scrollLeft;
-});
-
-track.addEventListener("mouseleave", () => {
-  isDragging = false;
-  track.classList.remove("dragging");
-});
-
-track.addEventListener("mouseup", () => {
-  isDragging = false;
-  track.classList.remove("dragging");
-});
-
-track.addEventListener("mousemove", (e) => {
-  if (!isDragging) return;
-  e.preventDefault();
-  const x = e.pageX - track.offsetLeft;
-  const walk = (x - startX) * 1.5; // scroll speed
-  track.scrollLeft = scrollLeft - walk;
-});
-
-
