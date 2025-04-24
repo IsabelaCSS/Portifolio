@@ -602,29 +602,44 @@ nav ul li a:hover::after {
     transform: scale(1.1);
   }
   
-
-  .carouselser {
-    position: relative;
+ 
+  .carouselser-track {
+    display: flex;
     width: 100%;
-    max-width: 1300px;
     height: 100%;
-    margin: 0 auto;
-    overflow: hidden;
+    transition: transform 0.5s ease-in-out;
   }
+
+.carouselser {
+  position: relative;
+  width: 100%;
+  max-width: 1300px;
+  height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
   
   .carouselser .slide.active {
     display: flex;
   }
-  
   .slide {
-    display: none; /* Adicione isso para esconder os slides que não estão ativos */
     position: relative;
     height: 600px;
+    opacity: 0;
+    display: none;
     align-items: center;
     justify-content: center;
     background-size: cover;
+    pointer-events: none; /* previne clique em slides escondidos */
   }
   
+  .slide.active {
+    display: flex;
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+  }
+
   .slide.active {
     display: flex;
     transition: transform 0.5s ease-in-out;
@@ -655,7 +670,6 @@ nav ul li a:hover::after {
     align-items: center;
     padding: 30px 40px;
     color: white;
-    transform: translateY(-0%);
 
   }
   .slide-content button {
@@ -770,3 +784,113 @@ nav ul li a:hover::after {
     }
   }
   
+  
+.titulo-contato {
+  text-align: center;
+  font-size: 40px;
+  color: #8361FF;
+  margin-top: 100px;
+  text-shadow: 1px 4px 3px rgb(49, 33, 106);
+}
+  .contatos {
+    max-width: 1200px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 20px;
+    font-family: 'Kulim Park';
+
+  }
+  
+  .form-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form-left input,
+  .form-left textarea {
+    padding: 15px 20px;
+    border: 2px solid #ffffff;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    border-radius: 40px;
+    resize: none;
+    font-family: 'Kulim Park';
+  }
+  
+  .form-left textarea {
+    height: 200px;
+    font-family: 'Kulim Park';
+
+  }
+  
+  .contact-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+
+  }
+  
+  .contact-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 18px;
+    font-family: 'Kulim Park';
+
+  }
+  
+  .contact-info i {
+    background-color: #8361FF;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 18px;
+    width: 36px;
+    height: 36px;
+    text-align: right;
+    line-height: 18px;
+    font-family: 'Kulim Park';
+
+  }
+  
+  .underline {
+    width: 150px;
+    height: 2px;
+    background: white;
+    margin-top: 10px;
+    margin-left: 50px;
+  }
+  
+  .bottom-message {
+    font-size: 16px;
+    max-width: 250px;
+    text-align: center;
+    font-family: 'Kulim Park';
+  }
+  
+  @media (max-width: 800px) {
+    .contatos {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .form-left,
+    .contact-right {
+      width: 100%;
+    }
+  
+    .contact-right {
+      align-items: center;
+    }
+  
+    .contact-info {
+      justify-content: center;
+    }
+  }

@@ -39,10 +39,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function showSlide(index) {
     slides.forEach((slide, i) => {
-      slide.classList.remove("active");
-      slide.style.display = i === index ? "flex" : "none";
+      if (i === index) {
+        slide.classList.add("active");
+      } else {
+        slide.classList.remove("active");
+      }
     });
   }
+  
 
   if (leftArrow && rightArrow && slides.length > 0) {
     leftArrow.addEventListener("click", () => {
