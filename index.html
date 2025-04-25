@@ -25,7 +25,7 @@
 <section class="content1">
     <div class="text">
         <h1><strong>Developer</strong></h1>
-        <h2><span class="highlight">Web</span></h2>
+        <h2><span class="highlight" id="typed-text">Web</span></h2>
         <p class="subtitle">Estudante de Programação</p>
         <p class="description">Aqui será meu resumo sobre mim, minhas formações,<br>atividades extracurriculares e certificados.</p>
         <div class="buttons">
@@ -118,7 +118,7 @@
           <p>Todos os projetos de desenvolvimento de sistema.</p>
           <div class="card-footer">
             <a href="#">GitHub</a>
-            <button>Detalhes</button>
+            <button><a href="destalhesPro.html" >Detalhes</a></button>
           </div>
         </div>
         <div class="card">
@@ -266,35 +266,41 @@
   <p class="resumo">Envie mensagem para alguma dúvida!</p>
 
   <div class="contatos">
-    <div class="form-left">
-      <input type="text" placeholder="Seu Nome" />
-      <input type="email" placeholder="Seu Email" />
-      <input type="tel" placeholder="Seu Telefone" />
-      <textarea placeholder="Sua Mensagem"></textarea>
-    </div>
+    <form class="form-left"  action="https://formspree.io/f/mnndnjzz" method="POST">
+      <input type="text" name="nome" placeholder="Seu Nome" required />
+      <input type="email" name="email" placeholder="Seu Email" required />
+      <input type="tel" name="telefone" placeholder="Seu Telefone" />
+      <textarea name="mensagem" placeholder="Sua Mensagem" required></textarea>
+      <button type="submit" class="btnmsg">Enviar mensagem</button>
+    </form>
+    
     <div class="contact-right">
       <div class="contact-info">
         <span>Isabela De Oliveira Alves</span>
-        <i class="fab fa-linkedin-in"></i>
+        <span class="iconcont"><img src="img/linkedin.png"></span>
       </div>
       <div class="contact-info">
         <span>isabeladev.52@gmail.com</span>
-        <i class="fas fa-envelope"></i>
+        <span class="iconcont"><img src="img/email.png"></span>
       </div>
       <div class="contact-info">
         <span>(11) 959247958</span>
-        <i class="fas fa-phone"></i>
+        <span class="iconcont"><img src="img/telefone.png"></span>
       </div>
       <div class="contact-info">
         <span>IsabelaESC</span>
-        <i class="fab fa-instagram"></i>
+        <span class="iconcont"><img src="img/instagram.png"></span>
       </div>
       <div class="underline"></div>
       <div class="bottom-message">
-        Quer saber mais? Basta tocar nos ícones e falar comigo!
+        Quer saber mais? Basta preencher o formulario!
       </div>
     </div>
   </div>
 
+  <footer class="footer">
+    <p>&copy; 2025 Isabela De Oliveira Alves. Todos os direitos reservados.</p>
+  </footer>
+  
 </body>
 </html>
