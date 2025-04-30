@@ -114,8 +114,7 @@ nav ul li a:hover::after {
   
   /* Botão de download */
   .btn-download {
-    background-color: #8361FF;
-    border: 1px solid #8361FF;
+    border: 2px solid #8361FF;
     color: white;
     padding: 10px 20px;
     border-radius: 8px;
@@ -126,83 +125,27 @@ nav ul li a:hover::after {
     margin-bottom: 30px;
     box-shadow: 0 0 10px rgba(131, 97, 255, 0.6);
     font-family: 'Kulim Park';
+    transition: 0.3s;
   }
   
   .btn-download:hover {
     background-color: #8361FF;
-    box-shadow: 0 0 15px rgba(131, 97, 255, 1);
+    color: #fff;
+    box-shadow: 0px 0px 20px rgba(131, 97, 255, 1);
   }
   
-  .tools-title {
-    text-align: left;
-    font-size: 23px;
-    color: #ffffff;
-    margin-bottom: 15px;
-    text-shadow: 1px 4px 3px rgb(17, 17, 17);
-  }
   
-  .tools {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  
-  .tool {
-    border: 2px solid #8361FF;
-    padding: 8px 20px;
-    border-radius: 10px;
-    font-size: 14px;
-    background: transparent;
-    color: white;
-    transition: background 0.3s;
-    
-  }
-  
-  .tool:hover {
-    background: #8361FF;
-  }
-  
-  /* Conteúdo da direita */
-  .right-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
+
   
   /* Imagem do projeto */
   .project-image {
     background-color: #cccccc;
-    width: 100%;
-    height: 300px;
+    width: 83%;
+    height: 330px;
     border-radius: 10px;
+    margin-left: 100px;
   }
-  
-  /* Objetivo do Projeto */
-  .project-objective {
-    background-color: #2b2b2b;
-    padding: 30px;
-    border-radius: 10px;
-  }
-  
-  .project-objective h3 {
-    text-align: left;
-    font-size: 23px;
-    color: #ffffff;
-    margin-bottom: 25px;
-    text-shadow: 1px 4px 3px rgb(17, 17, 17);
-  }
-  
-  
-  .project-objective ul {
-    padding-left: 20px;
-    list-style-type: disc;
-  }
-  
-  .project-objective li {
-    margin-bottom: 10px;
-    font-size: 16px;
-  }
+
   
   /* Responsividade */
   @media (max-width: 900px) {

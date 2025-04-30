@@ -103,7 +103,12 @@ nav ul li a:hover::after {
   white-space: nowrap;
   overflow: hidden;
 }
-
+.highlight1 {
+  color: #8361FF;
+  text-shadow: 1px 1px 3px rgba(131, 97, 255, 0.7);
+  border-right: 2px solid #8361FF;
+  padding-right: 5px;
+}
 
 .subtitle {
     font-size: 25px;
@@ -335,7 +340,7 @@ nav ul li a:hover::after {
     border-radius: 10px;
     cursor: pointer;
     transition: background 0.3s;
-    background: #131313;
+    background: #191919;
     padding: 20px;
 
   }
@@ -351,7 +356,7 @@ nav ul li a:hover::after {
   }
 
 .card {
-    background: #1a1a1a;
+    background: #191919;
     padding: 15px;
     border-radius: 12px;
     flex: 1 1 calc(30% - 20px);   /* 3 por linha, ajuste aqui se quiser mais ou menos */
@@ -846,6 +851,8 @@ nav ul li a:hover::after {
     gap: 20px;
     text-align: right;
     margin-right: 50px; /* afastar um pouco da borda */
+    font-family: 'Kulim Park';
+
 }
 .contact-info {
   display: flex;
@@ -880,6 +887,7 @@ nav ul li a:hover::after {
     margin-top: 10px;
     margin-left: 50px;
     align-items: center;
+    font-family: 'Kulim Park';
 
   }
   

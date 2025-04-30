@@ -89,3 +89,61 @@ const words = ["Web", "Front-end", "Back-end", "Full-stack", "Mobile"];
   }
 
   document.addEventListener("DOMContentLoaded", typeEffect);
+
+
+
+  window.onload = function () {
+    gerarCards("projetos", "projetos", criarCardProjeto);
+    gerarCards("certificados", "certificados", criarCardCertificado);
+    gerarCards("voluntariados", "voluntariados", criarCardVoluntariado);
+  };
+  
+  function gerarCards(tipo, containerId, criadorCard) {
+    const container = document.getElementById(containerId);
+    container.innerHTML = "";
+  
+    dadosPortfolio[tipo].forEach(item => {
+      const card = criadorCard(item);
+      container.appendChild(card);
+    });
+  }
+  
+  function criarCardProjeto(projeto) {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `
+      <div class="thumb"></div>
+      <h3>${projeto.titulo}</h3>
+      <p>${projeto.descricao}</p>
+      <div class="card-footer">
+        <a href="${projeto.github}" target="_blank">GitHub</a>
+        <a href="destalhesPro.html?projeto=${projeto.id}"><button>Detalhes</button></a>
+      </div>
+    `;
+    return card;
+  }
+  
+  function criarCardCertificado(cert) {
+    const card = document.createElement("div");
+    card.className = "cardCert";
+    card.innerHTML = `
+      <a href="${cert.link}"><div class="thumb"></div></a>
+      <h3>${cert.titulo}</h3>
+    `;
+    return card;
+  }
+  
+  function criarCardVoluntariado(volun) {
+    const card = document.createElement("div");
+    card.className = "cardVolun";
+    card.innerHTML = `
+      <div class="thumb"></div>
+      <h3>${volun.titulo}</h3>
+      <p>${volun.descricao}</p>
+      <div class="cardVolun-footer">
+        <a href="detalhesvolun.html?voluntariado=${volun.id}"><button>Detalhes</button></a>
+      </div>
+    `;
+    return card;
+  }
+  

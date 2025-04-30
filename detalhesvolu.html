@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nome do Voluntariado</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kulim+Park&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/detalhesvolun.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Portfólio</div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Sobre Mim</a></li>
+            <li><a href="index.html">Portfólio</a></li>
+            <li><a href="index.html">Conhecimentos</a></li>
+            <li><a href="index.html">Serviços</a></li>
+            <li><a href="index.html">Contato</a></li>
+        </ul>
+    </nav>
+  </header>
+
+  <section class="project-page">
+    <a href="index.html" class="btn-back">&lt; Voltar</a>
+  
+    <div class="project-container">
+      <div class="left-content">
+        <h1 class="project-title">Nome do Voluntariado</h1>
+        <p class="project-description">Descrição do voluntariado.</p>
+  
+        <a href="#" class="btn-download">
+          <img src="img/vermais.png" width="20px" height="20px">Ver Mais
+        </a>
+      </div>
+  
+      <div class="right-content">
+        <div class="project-image">
+          <!-- Imagem será carregada aqui -->
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+<script>
+// Dados do portfólio com os voluntariados
+const dadosPortfolio = {
+  voluntariados: [
+    {
+      id: "danca",
+      titulo: "Voluntariado na Dança",
+      descricao: "Eventos sociais e culturais com crianças e adolescentes.",
+      link: "download/CurriculoIsabela.pdf",
+      imagem: "img/voluntariado1.jpg"
+    },
+    {
+      id: "ongtech",
+      titulo: "ONG Tech para Jovens",
+      descricao: "Apoio no ensino de programação básica para jovens em situação de vulnerabilidade social.",
+      link: "https://ongtech.org/projeto",
+      imagem: "img/voluntariado2.jpg"
+    }
+  ]
+};
+
+// Função para carregar os dados do voluntariado
+function carregarVoluntariado() {
+  const params = new URLSearchParams(window.location.search);
+  const voluntariadoId = params.get("voluntariado");
+
+  const volunt = dadosPortfolio.voluntariados.find(v => v.id === voluntariadoId);
+
+  if (!volunt) {
+    document.querySelector(".project-title").innerText = "Voluntariado não encontrado";
+    document.querySelector(".project-description").innerText = "Verifique o link acessado.";
+    return;
+  }
+
+  // Atualiza os detalhes do voluntariado
+  document.querySelector(".project-title").innerText = volunt.titulo;
+  document.querySelector(".project-description").innerText = volunt.descricao;
+
+  // Verifica se há um link de download
+  const btnDownload = document.querySelector(".btn-download");
+  if (volunt.link) {
+    btnDownload.href = volunt.link;
+  } else {
+    btnDownload.style.display = "none"; // Oculta o botão caso não haja link
+  }
+
+  // Atualiza a imagem
+  const imgDiv = document.querySelector(".project-image");
+  imgDiv.innerHTML = `<img src="${volunt.imagem}" alt="${volunt.titulo}" style="width: 100%">`;
+}
+
+// Carrega o voluntariado ao carregar a página
+window.onload = carregarVoluntariado;
+</script>
+
+</body>
+</html>

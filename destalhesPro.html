@@ -10,6 +10,20 @@
 </head>
 <body>
 
+  <header>
+    <div class="logo">Portfólio</div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Sobre Mim</a></li>
+            <li><a href="index.html">Portfólio</a></li>
+            <li><a href="index.html">Conhecimentos</a></li>
+            <li><a href="index.html">Serviços</a></li>
+            <li><a href="index.html">Contato</a></li>
+        </ul>
+    </nav>
+  </header>
+
 <section class="project-page">
   <a href="index.html" class="btn-back">&lt; Voltar</a>
 
@@ -19,12 +33,12 @@
       <p class="project-description">
         Tenho 18 anos, sou formada em Desenvolvimento de Sistema, à procura do meu primeiro emprego
         na área de programação e faço parte de uma instituição de dança colaborando voluntariamente
-        nos eventos sociais para crianças e adolescentes.<br><br>
+        nos eventos sociais para crianças e adolescentes.
         Sou bem adaptável e proativa, sempre à disposição e animação em aprender novas coisas.
       </p>
 
       <a href="#" class="btn-download">
-        <i class="fas fa-download"></i> Download
+        <img src="img/download.png" width="15px" height="15px">Download
       </a>
 
       <h2 class="tools-title">Ferramentas utilizadas</h2>
@@ -42,7 +56,7 @@
       </div>
 
       <div class="project-objective">
-        <h3><i class="fas fa-bullseye"></i> Objetivo do Projeto</h3>
+        <h3><img src="img/objetivo.png" width="30px" height="30px"> Objetivo do Projeto</h3>
         <ul>
           <li>teste</li>
           <li>teste</li>
@@ -53,6 +67,76 @@
     </div>
   </div>
 </section>
+
+<script>
+  const projetos = {
+    landing: {
+      titulo: "Landing Page Pessoal",
+      descricao: "Projeto desenvolvido com HTML e CSS para apresentar um portfólio pessoal responsivo.",
+      download: "https://github.com/seuusuario/landing-page",
+      ferramentas: ["HTML", "CSS", "Responsividade"],
+      imagem: "img/projeto1.jpg",
+      objetivos: [
+        "Divulgar habilidades e experiências",
+        "Aplicar boas práticas de HTML e CSS",
+        "Tornar o site acessível e responsivo"
+      ]
+    },
+    blog: {
+      titulo: "Blog Tech",
+      descricao: "Blog informativo com layout moderno e integração de posts dinâmicos.",
+      download: "https://github.com/seuusuario/blog-tech",
+      ferramentas: ["HTML", "CSS", "JavaScript"],
+      imagem: "img/projeto2.jpg",
+      objetivos: [
+        "Publicar artigos de tecnologia",
+        "Exibir comentários e categorias",
+        "Permitir fácil manutenção do conteúdo"
+      ]
+    }
+    // Adicione mais projetos conforme necessário
+  };
+
+  function carregarProjeto() {
+    const params = new URLSearchParams(window.location.search);
+    const projetoId = params.get("projeto");
+
+    if (!projetoId || !projetos[projetoId]) {
+      document.querySelector(".project-title").innerText = "Projeto não encontrado";
+      document.querySelector(".project-description").innerText = "Verifique o link acessado.";
+      return;
+    }
+
+    const projeto = projetos[projetoId];
+
+    document.querySelector(".project-title").innerText = projeto.titulo;
+    document.querySelector(".project-description").innerText = projeto.descricao;
+    document.querySelector(".btn-download").href = projeto.download;
+
+    const ferramentasDiv = document.querySelector(".tools");
+    ferramentasDiv.innerHTML = "";
+    projeto.ferramentas.forEach(ferramenta => {
+      const span = document.createElement("span");
+      span.className = "tool";
+      span.textContent = ferramenta;
+      ferramentasDiv.appendChild(span);
+    });
+
+    const imgDiv = document.querySelector(".project-image");
+    imgDiv.innerHTML = `<img src="${projeto.imagem}" alt="${projeto.titulo}" style="width: 100%">`;
+
+    const objetivosUl = document.querySelector(".project-objective ul");
+    objetivosUl.innerHTML = "";
+    projeto.objetivos.forEach(obj => {
+      const li = document.createElement("li");
+      li.textContent = obj;
+      objetivosUl.appendChild(li);
+    });
+  }
+
+  window.onload = carregarProjeto;
+</script>
+
 
 </body>
 </html>
