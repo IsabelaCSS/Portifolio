@@ -103,6 +103,13 @@ nav ul li a:hover::after {
   white-space: nowrap;
   overflow: hidden;
 }
+.highlight1 {
+  color: #8361FF;
+  text-shadow: 1px 1px 3px rgba(131, 97, 255, 0.7);
+  border-right: 2px solid #8361FF;
+  padding-right: 5px;
+  overflow: hidden;
+}
 
 
 .subtitle {
