@@ -24,11 +24,11 @@ const dadosPortfolio = {
     voluntariados: [
       {
         id: "danca",
-        titulo: "Voluntariado na Dança",
-        descricao: "Eventos sociais e culturais com crianças e adolescentes.",
-        link: "download/CurriculoIsabela.pdf",
-        imagem: "img/voluntariado1.jpg"
-      },
+      titulo: "Voluntariado na Dança",
+      descricao: "Eventos sociais e culturais com crianças e adolescentes.",
+      link: "download/CurriculoIsabela.pdf",
+      imagem: "img/computador.jpg"
+    },
       {
         id: "ongtech",
         titulo: "ONG Tech para Jovens",
