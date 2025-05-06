@@ -112,7 +112,7 @@ const words = ["Web", "Front-end", "Back-end", "Full-stack", "Mobile"];
     const card = document.createElement("div");
     card.className = "card";
     card.innerHTML = `
-      <div class="thumb"></div>
+      <div class="thumb"><img src="${projeto.imagem}" alt="${projeto.titulo}"></div>
       <h3>${projeto.titulo}</h3>
       <p>${projeto.descricao}</p>
       <div class="card-footer">

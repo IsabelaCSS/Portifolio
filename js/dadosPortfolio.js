@@ -2,9 +2,10 @@ const dadosPortfolio = {
     projetos: [
       {
         id: "landing",
-        titulo: "Landing Page",
-        descricao: "Projeto de apresentação pessoal com HTML e CSS.",
-        github: "https://github.com/seuusuario/landing-page"
+        imagem: "img/portifolio/exdinamos.png",
+        titulo: "Exdinamos",
+        descricao: "Projeto de apresentação de uma academia com seu Cartão de Visita e Flyer.",
+        github: "https://github.com/IsabelaCSS/Exdinamos"
       },
       {
         id: "blog",

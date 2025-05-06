@@ -215,3 +215,15 @@ nav ul li a:hover::after {
     }
   }
   
+
+  
+
+  .footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1b1b1b;
+    color: #ffffff;
+    font-family: 'Kulim Park';
+    font-size: 14px;
+    margin-top: 50px;
+  }

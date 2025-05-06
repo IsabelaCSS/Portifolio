@@ -381,9 +381,16 @@ nav ul li a:hover::after {
   .thumb {
     width: 100%;
     height: 200px;
-    background: #e2e2e2;
     border-radius: 8px;
     margin-bottom: 15px;
+    overflow: hidden;
+  }
+  
+  .thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
   }
   
   .card h3 {
@@ -398,6 +405,11 @@ nav ul li a:hover::after {
     color: #ccc;
     margin-bottom: 15px;
     margin-left: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Número de linhas */
+    -webkit-box-orient: vertical;
   }
   
   .card-footer {
