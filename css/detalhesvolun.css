@@ -140,10 +140,12 @@ nav ul li a:hover::after {
   /* Imagem do projeto */
   .project-image {
     background-color: #cccccc;
-    width: 83%;
+    width: 86%;
     height: 330px;
     border-radius: 10px;
     margin-left: 100px;
+    object-fit: cover;
+    overflow: hidden;
   }
 
   

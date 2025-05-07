@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nome do Projeto</title>
+  <title>Projeto</title>
   <link href="https://fonts.googleapis.com/css2?family=Kulim+Park&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/detalhesPro.css">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -31,10 +31,7 @@
     <div class="left-content">
       <h1 class="project-title">Nome do Projeto</h1>
       <p class="project-description">
-        Tenho 18 anos, sou formada em Desenvolvimento de Sistema, à procura do meu primeiro emprego
-        na área de programação e faço parte de uma instituição de dança colaborando voluntariamente
-        nos eventos sociais para crianças e adolescentes.
-        Sou bem adaptável e proativa, sempre à disposição e animação em aprender novas coisas.
+        descricao
       </p>
 
       <a href="#" class="btn-download">
@@ -43,25 +40,18 @@
 
       <h2 class="tools-title">Ferramentas utilizadas</h2>
       <div class="tools">
-        <span class="tool">Dart</span>
-        <span class="tool">HtmlHub</span>
-        <span class="tool">HTML</span>
-        <span class="tool">CSS</span>
+        <span class="tool">Ferramenta</span>
       </div>
     </div>
 
     <div class="right-content">
       <div class="project-image">
-        <!-- Imagem do projeto aqui -->
       </div>
 
       <div class="project-objective">
         <h3><img src="img/objetivo.png" width="30px" height="30px"> Objetivo do Projeto</h3>
         <ul>
-          <li>teste</li>
-          <li>teste</li>
-          <li>teste</li>
-          <li>teste</li>
+          <li>Objetivo</li>
         </ul>
       </div>
     </div>
@@ -70,13 +60,55 @@
 
 <script>
   const projetos = {
-    landing: {
+    apptcc: {
+      titulo: "App Overhaul_TCC",
+      descricao: "O aplicativo Overhaul foi desenvolvido em 2024 como parte do Trabalho de Conclusão de Curso (TCC) para a formação técnica em Desenvolvimento de Sistemas. O projeto foi realizado por um grupo de estudantes composto por: Carolina de Oliveira Alves, Giovana Vitória Borba dos Santos, Helena Jorgeane Menezes Macedo, Isabela de Oliveira Alves, Matheus Garcia Fernandes Victor e Rebeca Martins Silva.\n" +
+      "Solicitado pela própria empresa Overhaul, o objetivo do aplicativo é oferecer um catálogo completo de veículos híbridos e elétricos, com foco em auxiliar potenciais compradores na escolha do modelo ideal. A plataforma apresenta informações detalhadas como nome dos veículos, imagens, preços, especificações técnicas, avaliações e itens adicionais.\n\n" +
+      "O app permite comparar modelos com base no valor e nos recursos oferecidos, promovendo uma experiência informativa e prática. O desenvolvimento envolveu conhecimentos de programação mobile e design de interface, representando a integração de habilidades adquiridas ao longo do curso.",
+      download: "https://drive.google.com/file/d/1EU-1yLVP7KsN2fegbOEcpNvvDNuAuHnl/view?usp=sharing",
+      ferramentas: ["VSCode", "Dart", "Figma","Github","Canva"],
+      imagem: "img/portifolio/apptcc.png",
+      objetivos: [
+        "Desenvolvimento aplicativo Catálogo",
+        "Aplicação mobile",
+        "Busca ao veículo"
+      ]
+    },
+    appbrecho: {
+      titulo: "App Brecho da Barbie",
+      descricao: "O aplicativo 'Brechó da Barbie' foi desenvolvido em 2024 pelas alunas Isabela de Oliveira e Bárbara Vitória, com o objetivo de promover a conscientização sobre a sustentabilidade por meio do reaproveitamento de roupas. O projeto surge como resposta ao crescente acúmulo de resíduos têxteis no planeta, incentivando os usuários a doar ou vender roupas em bom estado ao invés de descartá-las no lixo.\n" +
+      "O app aborda tópicos educativos como 'Por que doar', 'Como doar' e 'Onde doar', trazendo informações práticas e relevantes sobre o impacto ambiental e as formas de contribuir com a causa. Além disso, uma das funcionalidades mais atrativas do aplicativo é o sistema de pontos: quanto mais e melhor for a qualidade das roupas doadas, mais pontos o usuário acumula. Esses pontos podem ser trocados por cupons de desconto em lojas parceiras como Riachuelo, C&A, entre outras.\n\n" +
+      "O 'Brechó da Barbie' une tecnologia, impacto social e responsabilidade ambiental, proporcionando uma solução digital simples e envolvente para transformar hábitos e colaborar com o meio ambiente.",
+      download: "https://drive.google.com/file/d/11S9JKVPvP38yUCdD3mLknAkcmB4YlhCb/view?usp=drive_link",
+      ferramentas: ["Android Studio", "Java", "Canva","Github",],
+      imagem: "img/portifolio/appbrecho.png",
+      objetivos: [
+        "Desenvolvimento aplicativo Catálogo",
+        "Aplicação mobile",
+        "Busca a Brechó"
+      ]
+    },
+      appexer: {
+      titulo: "App Exercicio",
+      descricao: "O projeto de aplicativo foi desenvolvido em 2023 por Isabela De Oliveira como parte de um desafio proposto pela professora Aline, durante as aulas de programação em Java no Android Studio. O objetivo era criar um aplicativo funcional que aplicasse conceitos de cálculo, com duas telas: uma para verificar se dois números são múltiplos entre si e outra para realizar somas, utilizando ao menos três widgets diferentes ao longo do projeto.\n" +
+      "Com o desafio, foi escolhido o tema de um restaurante. A primeira tela do aplicativo permite calcular o total de um pedido, somando os valores dos itens digitatos. Já a segunda tela verifica se dois números inseridos pelo usuário são múltiplos, reforçando o uso de lógica e validação de dados.\n\n" +
+      "A proposta uniu raciocínio lógico, prática de programação mobile e criatividade na escolha do tema e layout. ",
+      download: "https://drive.google.com/file/d/10v0Cvl6nLCJqesnskfD3AXwIcoBFI2lr/view?usp=sharing",
+      ferramentas: ["Android Studio", "Canva", "Java","Github"],
+      imagem: "img/portifolio/appexer.png",
+      objetivos: [
+        "Praticar desenvolvimento aplicativo",
+        "Aplicar no celular",
+        "Calcular e entregar resultado"
+      ]
+    },
+    exdinamos: {
       titulo: "Exdinamos",
       descricao: "O projeto da academia Exdinamos foi desenvolvido em 2022 por um grupo de estudantes: Isabela De Oliveira, Carolina de Oliveira, João Henrique e Livia Rodrigues. A proposta foi realizada para a disciplina do professor Wellington Cidade, com o objetivo de criar uma empresa fictícia e desenvolver sua identidade digital e visual.\n" +
       "O grupo escolheu o tema de uma academia e criou um site informativo utilizando HTML e CSS, com foco na apresentação dos serviços, planos e contato. Além do site, também foram elaborados o cartão de visita, o flyer da empresa e perfis em redes sociais, voltados para a divulgação de anúncios e campanhas promocionais.\n\n" +
       "O projeto uniu criatividade, habilidades em programação e design gráfico, representando de forma completa a identidade da academia Exdinamos.",
       download: "https://drive.google.com/file/d/1xNg--Url6YuXSBTqXQcbpRmAbAKQhwQ1/view?usp=drive_link",
-      ferramentas: ["HTML", "CSS", "Canva","CorelDraw", "Instagram","Facebook","VSCode"],
+      ferramentas: ["HTML", "CSS", "Canva","CorelDraw", "Instagram","Facebook","VSCode","Github"],
       imagem: "img/portifolio/exdinamos.png",
       objetivos: [
         "Divulgar habilidades e experiências",
@@ -85,18 +117,6 @@
         "Desenvolver campanhas"
       ]
     },
-    blog: {
-      titulo: "Blog Tech",
-      descricao: "Blog informativo com layout moderno e integração de posts dinâmicos.",
-      download: "https://github.com/seuusuario/blog-tech",
-      ferramentas: ["HTML", "CSS", "JavaScript"],
-      imagem: "img/projeto2.jpg",
-      objetivos: [
-        "Publicar artigos de tecnologia",
-        "Exibir comentários e categorias",
-        "Permitir fácil manutenção do conteúdo"
-      ]
-    }
     // Adicione mais projetos conforme necessário
   };
 

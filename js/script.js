@@ -127,7 +127,7 @@ const words = ["Web", "Front-end", "Back-end", "Full-stack", "Mobile"];
     const card = document.createElement("div");
     card.className = "cardCert";
     card.innerHTML = `
-      <a href="${cert.link}"><div class="thumb"></div></a>
+      <a href="${cert.link}"><div class="thumb"><img src="${cert.imagem}" alt="${cert.titulo}"></div></a>
       <h3>${cert.titulo}</h3>
     `;
     return card;
@@ -137,7 +137,7 @@ const words = ["Web", "Front-end", "Back-end", "Full-stack", "Mobile"];
     const card = document.createElement("div");
     card.className = "cardVolun";
     card.innerHTML = `
-      <div class="thumb"></div>
+      <div class="thumb"><img src="${volun.imagem}" alt="${volun.titulo}"></div>
       <h3>${volun.titulo}</h3>
       <p>${volun.descricao}</p>
       <div class="cardVolun-footer">
