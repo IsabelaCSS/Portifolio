@@ -5,29 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Isabela</title>
     <link rel="stylesheet" type="text/css" href="css/inicial.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-<header>
+  <header>
     <div class="logo">Portfólio</div>
     <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#sobre">Sobre Mim</a></li>
-            <li><a href="#portfolio">Portfólio</a></li>
-            <li><a href="#conhecimentos">Conhecimentos</a></li>
-            <li><a href="#serviços">Serviços</a></li>
-            <li><a href="#contato">Contato</a></li>
-        </ul>
+      <div class="menu-icon" onclick="openMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+  
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#sobre">Sobre Mim</a></li>
+        <li><a href="#portfolio">Portfólio</a></li>
+        <li><a href="#conhecimentos">Conhecimentos</a></li>
+        <li><a href="#serviços">Serviços</a></li>
+        <li><a href="#contato">Contato</a></li>
+        <div class="close-icon" onclick="closeMenu()">
+          <i class="fa-solid fa-circle-xmark"></i>
+        </div>
+      </ul>
     </nav>
-</header>
+    <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+
+  </header>
+  
 
 <section class="content1">
     <div class="text">
         <h1><strong>Developer</strong></h1>
         <h2><span class="highlight" id="typed-text">Web</span></h2>
         <p class="subtitle">Estudante de Programação</p>
-        <p class="description">Aqui será meu resumo sobre mim, minhas formações,<br>atividades extracurriculares e certificados.</p>
+        <p class="description">Aqui será meu resumo sobre mim, minhas <br> formações, atividades extracurriculares e certificados.</p>
         <div class="buttons">
             <a href="download/documentacao - overhaul.pdf" class="btn">Projeto: TCC</a>
             <a href="https://github.com/IsabelaCSS" class="btn">GitHub</a>
@@ -54,6 +65,7 @@
             </p>
             <div class="buttons">
                 <a href="download/CurriculoIsabela.pdf" class="btn1"><img src="img/download.png" width="15px" height="15px"> Download CV </a>
+                <a href="download/CvArtistico_Isabela.pdf" class="btn1"><img src="img/download.png" width="15px" height="15px"> Download CV Artístico </a>
                 <a href="https://www.linkedin.com/in/isabela-de-oliveira-alves/" class="btn">Linkedin</a>
             </div>
         </div>
@@ -390,7 +402,7 @@
   <p class="resumo">Envie mensagem para alguma dúvida!</p>
 
   <div class="contatos">
-    <form class="form-left"  action="https://formspree.io/f/mnndnjzz" method="POST">
+    <form id="form-left" class="form-left" action="https://formspree.io/f/mnndnjzz" method="POST">
       <input type="text" name="nome" placeholder="Seu Nome" required/>
       <input type="email" name="email" placeholder="Seu Email" required />
       <input type="tel" name="telefone" placeholder="Seu Telefone" />
@@ -401,23 +413,23 @@
     <div class="contact-right">
       <div class="contact-info">
         <span>Isabela De Oliveira Alves</span>
-        <span class="iconcont"><img src="img/linkedin.png"></span>
+        <a href="https://www.linkedin.com/in/isabela-de-oliveira-alves/"><span class="iconcont"><img src="img/linkedin.png"></span></a>
       </div>
       <div class="contact-info">
         <span>isabeladev.52@gmail.com</span>
-        <span class="iconcont"><img src="img/email.png"></span>
+        <a href="mailto:isabeladev.52@gmail.com?subject=Portf%C3%B3lio - D%C3%BAvida&body=Seu Nome %7C Email %7C Assunto"><span class="iconcont"><img src="img/email.png"></span></a>
       </div>
       <div class="contact-info">
         <span>(11) 959247958</span>
-        <span class="iconcont"><img src="img/telefone.png"></span>
+        <a href="https://wa.me/5511959247958?text=%F0%9F%91%8B%20Ol%C3%A1!%20Gostaria%20de%20entrar%20em%20contato%20com%20voc%C3%AA!%0A%0A_-%20Portfolio_"><span class="iconcont"><img src="img/telefone.png"></span></a>
       </div>
       <div class="contact-info">
         <span>IsabelaESC</span>
-        <span class="iconcont"><img src="img/instagram.png"></span>
+        <a href="https://www.instagram.com/isabelaesc?igsh=MWRmZ2VlOW16Y3MwZw=="><span class="iconcont"><img src="img/instagram.png"></span></a>
       </div>
       <div class="underline"></div>
       <div class="bottom-message">
-        Quer saber mais? Basta preencher o formulario!
+        Quer saber mais? Basta clicar nos icones acima!
       </div>
     </div>
   </div>
@@ -425,6 +437,20 @@
   <footer class="footer">
     <p>&copy; 2025 Isabela De Oliveira Alves. Todos os direitos reservados.</p>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+  <script>
+  function openMenu() {
+    document.querySelector("nav ul").classList.add("open");
+  }
+
+  function closeMenu() {
+    document.querySelector("nav ul").classList.remove("open");
+  }
   
+</script>
+
+
 </body>
 </html>

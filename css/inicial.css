@@ -65,13 +65,85 @@ nav ul li a:hover::after {
     transition: 0.3s;
 
 }
+nav .menu-icon{
+  cursor: pointer;
+  font-size: 25px;
+  color: #fff;
+  display: none;
+}
+nav .close-icon{
+  cursor: pointer;
+  display: none;
+  color: #fff;
+  font-size: 30px;
+}
+@media (max-width: 768px) {
+  nav ul {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #8361FF;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    clip-path: circle(0% at 100% 0);
+    transition: clip-path 0.6s ease-in-out;
+    z-index: 999;
+    gap: 30px;
+  }
+
+  nav ul.open {
+    clip-path: circle(141.4% at 100% 0);
+  }
+
+  nav .menu-icon {
+    display: block;
+  }
+
+  nav .close-icon {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  nav ul li a:hover {
+    color: rgb(255, 255, 255);
+  }
+
+  nav ul li a.active::after,
+nav ul li a:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    transition: 0.8s;
+
+}
+}
 
 .content1 {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: calc(100vh - 0px);
-    padding: 0 70px;
+    margin-top: 100px;
+    padding: 70px;
     flex-wrap: wrap;
     margin-left: 70px;
 }
@@ -93,6 +165,49 @@ nav ul li a:hover::after {
     margin-bottom: 1px;
     font-family: 'Konkhmer Sleokchher';
 }
+
+@media (max-width: 768px) {
+  .content1 {
+    display: flex; /* mantém lado a lado */
+    flex-direction: row; /* horizontal */
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* permite quebrar se não couber */
+    margin-top: 60px;
+    margin-left: 10px;
+  }
+
+  .text {
+    font-size: 20px;
+  }
+
+  .text h1 {
+    position: relative;
+    display: inline-block;
+  }
+ 
+
+  .text h2 {
+    font-size: 34px;
+    margin-bottom: 10px;
+  }
+
+  .subtitle {
+    margin-bottom: 10px;
+    font-family: 'Kulim Park';
+    font-size: clamp(10px, 2.5vw, 18px);
+  }
+
+  .description {
+    margin-bottom: 30px;
+    font-family: 'Kulim Park';
+    font-size: 13px;
+  }
+  .image img {
+    display: none;
+  }
+}
+
 
 /*Sobre Mim*/
 .highlight {
@@ -160,6 +275,8 @@ nav ul li a:hover::after {
     margin-right: 60px;
     height: auto;
 }
+
+
 
 .sobre-mim {
     padding: 0px 160px;
@@ -301,6 +418,67 @@ nav ul li a:hover::after {
     font-family: 'Kulim Park';
 
 }
+@media (max-width: 768px) {
+  .sobre-mim {
+    padding: 20px;
+  }
+
+  .titulo-sobre {
+    font-size: 50px;
+    width: 100%;
+    margin: 0 auto 20px auto;
+  }
+
+  .resumo {
+    font-size: 16px;
+    margin: 0 auto 40px auto;
+    width: 90%;
+    max-width: 400px;
+  }
+
+
+  .sobre-container {
+    flex-direction: column;
+    padding: 0 20px;
+}
+
+
+  .texto-sobre {
+    max-width: 100%;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .texto-sobre h1 {
+    font-size: clamp(20px, 5vw, 32px);
+  }
+  
+  .texto-sobre h3 {
+    font-size: clamp(12px, 3vw, 18px);
+  }
+  
+  .descricao-sobre {
+    font-size: clamp(12px, 2.5vw, 16px);
+  }
+  
+
+
+  .caixa {
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .estatisticas {
+    flex-direction: column;
+    align-items: center;
+}
+  .foto-sobre {
+    display: none;
+  
+}
+}
 
 /*Portfolio*/
 .portfolio {
@@ -336,14 +514,14 @@ nav ul li a:hover::after {
     cursor: pointer;
     transition: background 0.3s;
     background: #191919;
-    padding: 20px;
-
   }
 
   .tab.active {
     background: #2b2b2b;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
   }
+  
   
   .tab p {
     font-weight: bold;
@@ -359,7 +537,8 @@ nav ul li a:hover::after {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 350px;
+    max-height: 395px;
+
 }
 .card:hover {
     transform: translateY(-3px);
@@ -407,7 +586,6 @@ nav ul li a:hover::after {
     margin-left: 10px;
     overflow: hidden;
     text-overflow: ellipsis;
-    display: -webkit-box;
     -webkit-line-clamp: 3; /* Número de linhas */
     -webkit-box-orient: vertical;
   }
@@ -477,7 +655,7 @@ nav ul li a:hover::after {
     margin-bottom: 15px;
 }
 .cardVolun {
-    background: #1a1a1a;
+    background: #191919;
     padding: 15px;
     border-radius: 12px;
     flex: 1 1 calc(30% - 20px);   /* 3 por linha, ajuste aqui se quiser mais ou menos */
@@ -486,6 +664,7 @@ nav ul li a:hover::after {
     flex-direction: column;
     justify-content: space-between;
     height: 350px;
+    max-height: 395px;
 }
 .cardVolun:hover {
     transform: translateY(-3px);
@@ -554,7 +733,6 @@ nav ul li a:hover::after {
     .content {
         flex-direction: column;
         padding: 40px 20px;
-        text-align: center;
     }
 
     .sobre-container {
@@ -626,6 +804,18 @@ nav ul li a:hover::after {
     width: 100%;
     height: 100%;
     transition: transform 0.5s ease-in-out;
+  }
+  @media (max-width: 768px) {
+    .carousel-wrapper {
+      position: relative;
+      margin: 10px 50px;
+      overflow: hidden;
+    }
+    .carousel-track img {
+      width: 90px;
+      height: 90px;
+    }
+    
   }
 
 .carouselser {
@@ -969,3 +1159,10 @@ nav ul li a:hover::after {
     object-fit: contain;
 }
 
+@media (max-width: 768px) {
+  .tabs {
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 20px;
+  }
+}
