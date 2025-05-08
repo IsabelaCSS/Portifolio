@@ -424,47 +424,44 @@ nav ul li a:hover::after {
   }
 
   .titulo-sobre {
-    font-size: 50px;
+    font-size: 40px;
     width: 100%;
-    margin: 0 auto 20px auto;
+    align-items: center;
   }
 
   .resumo {
     font-size: 16px;
-    margin: 0 auto 40px auto;
-    width: 90%;
-    max-width: 400px;
+    align-items: center;
+    
   }
-
 
   .sobre-container {
     flex-direction: column;
-    padding: 0 20px;
+    padding: 1000px 10px;
+    
 }
-
 
   .texto-sobre {
     max-width: 100%;
-    padding: 0 20px;
+    padding: 0 50px;
     text-align: center;
+
   }
 
   .texto-sobre h1 {
-    font-size: clamp(20px, 5vw, 32px);
+    font-size: clamp(25px, 5vw, 32px);
   }
   
   .texto-sobre h3 {
-    font-size: clamp(12px, 3vw, 18px);
+    font-size: clamp(19px, 2.5vw, 16px);
   }
   
   .descricao-sobre {
-    font-size: clamp(12px, 2.5vw, 16px);
+    font-size: clamp(17px, 2.5vw, 16px);
   }
   
-
-
   .caixa {
-    width: 90%;
+    width: 100%;
     max-width: 400px;
     height: auto;
     margin: 0 auto;
@@ -476,7 +473,14 @@ nav ul li a:hover::after {
 }
   .foto-sobre {
     display: none;
-  
+}
+.buttons {
+  display: flex;
+  gap: 20px;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  text-align: center;
 }
 }
 
@@ -805,18 +809,7 @@ nav ul li a:hover::after {
     height: 100%;
     transition: transform 0.5s ease-in-out;
   }
-  @media (max-width: 768px) {
-    .carousel-wrapper {
-      position: relative;
-      margin: 10px 50px;
-      overflow: hidden;
-    }
-    .carousel-track img {
-      width: 90px;
-      height: 90px;
-    }
-    
-  }
+ 
 
 .carouselser {
   position: relative;
@@ -829,6 +822,18 @@ nav ul li a:hover::after {
   
   .carouselser .slide.active {
     display: flex;
+  }
+  @media (max-width: 768px) {
+    .carousel-track img {
+      width: 90px;
+      height: 100px;
+      
+    }
+    .carousel-wrapper {
+      position: relative;
+      margin: 10px 50px;
+      overflow: hidden;
+    }
   }
   .slide {
     position: relative;
@@ -966,20 +971,23 @@ nav ul li a:hover::after {
 
   @media (max-width: 768px) {
     .left h1 {
-      font-size: 40px;
+      font-size: 50px;
       margin-left: 20px;
+      padding-right: 50px;
+
     }
   
     .left p {
       font-size: 16px;
       margin-left: 20px;
+      padding-right: 50px;
     }
   
     .btnser {
-      bottom: 10px;
-      right: 20px;
+      bottom: -15px;
+      right: 60px;
       padding: 10px 20px;
-      font-size: 14px;
+      font-size: 17px;
     }
   
     .arrow {
@@ -987,12 +995,25 @@ nav ul li a:hover::after {
     }
   
     .right {
-      padding-top: 200px;
       padding-right: 10px;
     }
+    .left {
+      padding-left: 10px;
+    }
+
+    .carouselser {
+      position: relative;
+      width: 100%;
+      max-width: 1300px;
+      height: 100%;
+      overflow: hidden;
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+    
   }
   
-  
+
 .titulo-contato {
   text-align: center;
   font-size: 40px;
@@ -1110,26 +1131,61 @@ nav ul li a:hover::after {
     box-shadow: 0px 0px 5px rgba(131, 97, 255, 1);
     transition: 0.3s;
 }
-
-  @media (max-width: 800px) {
-    .contatos {
-      flex-direction: column;
-      align-items: left;
-    }
-  
-    .form-left,
-    .contact-right {
-      width: 100%;
-    }
-  
-    .contact-right {
-      align-items: left;
-    }
-  
-    .contact-info {
-      justify-content: left;
-    }
+@media (max-width: 768px) {
+  .contatos {
+    flex-direction: column;
+    align-items: right; 
   }
+
+  .form-left,
+  .contact-right {
+    width: 100%;
+    align-items: right; 
+    text-align: right;
+  }
+
+  .contact-right {
+    position: static;
+    margin-top: 20px;
+    transform: none;
+  }
+
+  .contact-info {
+    justify-content: right; 
+    text-align: right;
+  }
+
+  .contact-info span {
+    text-align: right;
+  }
+  .underline {
+    margin-left: 65%;
+  }
+  .bottom-message {
+    text-align: right;
+    margin-left: 50%;
+  }
+ 
+}
+
+@media (max-width: 768px) {
+  .form-left input,
+  .form-left textarea {
+    height: 48px;
+    width: 100%;
+  }
+
+  .form-left textarea {
+    height: 150px;
+
+  }
+
+  .contact-right {
+    position: static; /* REMOVE também aqui para segurança */
+    margin-top: 20px;
+    transform: none;
+  }
+}
 
 
   .footer {
@@ -1165,4 +1221,12 @@ nav ul li a:hover::after {
     gap: 10px;
     margin: 0 20px;
   }
+  .iconcont {
+    width: 50px;
+    height: 50px;
+}
+.iconcont img {
+  width: 30px;
+  height: 30px;
+}
 }
