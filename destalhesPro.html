@@ -6,6 +6,7 @@
   <title>Projeto</title>
   <link href="https://fonts.googleapis.com/css2?family=Kulim+Park&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/detalhesPro.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -13,16 +14,26 @@
   <header>
     <div class="logo">Portfólio</div>
     <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="index.html">Sobre Mim</a></li>
-            <li><a href="index.html">Portfólio</a></li>
-            <li><a href="index.html">Conhecimentos</a></li>
-            <li><a href="index.html">Serviços</a></li>
-            <li><a href="index.html">Contato</a></li>
-        </ul>
+      <div class="menu-icon" onclick="openMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+  
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">Sobre Mim</a></li>
+        <li><a href="index.html">Portfólio</a></li>
+        <li><a href="index.html">Conhecimentos</a></li>
+        <li><a href="index.html">Serviços</a></li>
+        <li><a href="index.html">Contato</a></li>
+        <div class="close-icon" onclick="closeMenu()">
+          <i class="fa-solid fa-circle-xmark"></i>
+        </div>
+      </ul>
     </nav>
+    <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+
   </header>
+  
 
 <section class="project-page">
   <a href="index.html" class="btn-back">&lt; Voltar</a>
@@ -164,5 +175,17 @@
   <p>&copy; 2025 Isabela De Oliveira Alves. Todos os direitos reservados.</p>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+  function openMenu() {
+    document.querySelector("nav ul").classList.add("open");
+  }
+
+  function closeMenu() {
+    document.querySelector("nav ul").classList.remove("open");
+  }
+  
+</script>
 </body>
 </html>

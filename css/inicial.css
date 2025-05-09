@@ -437,13 +437,14 @@ nav ul li a:hover::after {
   .resumo {
     font-size: 16px;
     align-items: center;
-    
+    max-width: 100%;
+
   }
 
   .sobre-container {
     flex-direction: column;
-    padding: 0px 200px;
-    
+    max-width: 100%;
+
 }
 
   .texto-sobre {
@@ -462,12 +463,13 @@ nav ul li a:hover::after {
   }
   
   .descricao-sobre {
-    font-size: clamp(17px, 2.5vw, 16px);
+    font-size: 17px;
+    margin-left: -10%;
   }
-  
+
   .caixa {
     width: 100%;
-    max-width: 400px;
+    max-width: 80%;
     height: auto;
     margin: 0 auto;
   }
@@ -765,8 +767,8 @@ nav ul li a:hover::after {
     }
 
     .portfolio {
-      margin-left: -60px;
-      margin-right: -80px;
+      max-width: 100%;
+
 
   }
 
@@ -1009,7 +1011,7 @@ nav ul li a:hover::after {
 
   @media (max-width: 768px) {
     .left h1 {
-      font-size: 35px;
+      font-size: 50px;
       margin-left: -15px;
       padding-right: 50px;
 
@@ -1023,7 +1025,7 @@ nav ul li a:hover::after {
   
     .btnser {
       bottom: -15px;
-      margin-right: 15%;
+      margin-right: 10%;
       padding: 10px 20px;
       font-size: 17px;
     }
@@ -1196,7 +1198,7 @@ nav ul li a:hover::after {
     text-align: right;
   }
   .underline {
-    margin-left: 50%;
+    margin-left: 55%;
   }
   .bottom-message {
     text-align: right;
