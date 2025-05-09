@@ -77,6 +77,7 @@ nav .close-icon{
   color: #fff;
   font-size: 30px;
 }
+
 @media (max-width: 768px) {
   nav ul {
     position: fixed;
@@ -107,14 +108,14 @@ nav .close-icon{
     position: absolute;
     top: 30px;
     right: 30px;
-    font-size: 28px;
+    font-size: 40px;
     color: white;
     cursor: pointer;
     z-index: 1000;
   }
 
   nav ul li a {
-    font-size: 20px;
+    font-size: 30px;
     color: white;
     font-weight: bold;
     text-decoration: none;
@@ -174,7 +175,7 @@ nav ul li a:hover::after {
     align-items: center;
     flex-wrap: wrap; /* permite quebrar se não couber */
     margin-top: 60px;
-    margin-left: 10px;
+    margin-left: -20px;
   }
 
   .text {
@@ -247,6 +248,8 @@ nav ul li a:hover::after {
     transition: 0.3s;
     box-shadow: 0px 0px 10px rgba(131, 97, 255, 0.5);
     font-family: 'Kulim Park';
+    justify-content: space-between;
+
 }
 
 .btn:hover {
@@ -262,6 +265,8 @@ nav ul li a:hover::after {
     padding: 10px 20px;
     border-radius: 8px;
     font-family: 'Kulim Park';
+    justify-content: space-between;
+
 }
 
 .btn1:hover {
@@ -420,7 +425,7 @@ nav ul li a:hover::after {
 }
 @media (max-width: 768px) {
   .sobre-mim {
-    padding: 20px;
+    padding: 0px;
   }
 
   .titulo-sobre {
@@ -437,7 +442,7 @@ nav ul li a:hover::after {
 
   .sobre-container {
     flex-direction: column;
-    padding: 1000px 10px;
+    padding: 0px 200px;
     
 }
 
@@ -470,6 +475,8 @@ nav ul li a:hover::after {
   .estatisticas {
     flex-direction: column;
     align-items: center;
+    gap:10px;
+
 }
   .foto-sobre {
     display: none;
@@ -628,7 +635,7 @@ nav ul li a:hover::after {
 }
 
 .cardCert {
-    background: #1a1a1a;
+    background: #191919;
     padding: 15px;
     border-radius: 12px;
     flex: 1 1 calc(30% - 20px);   /* 3 por linha, ajuste aqui se quiser mais ou menos */
@@ -636,7 +643,8 @@ nav ul li a:hover::after {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 280px;
+    max-height: 395px;
+
 }
 .cardCert:hover {
     transform: translateY(-3px);
@@ -659,16 +667,15 @@ nav ul li a:hover::after {
     margin-bottom: 15px;
 }
 .cardVolun {
-    background: #191919;
-    padding: 15px;
-    border-radius: 12px;
-    flex: 1 1 calc(30% - 20px);   /* 3 por linha, ajuste aqui se quiser mais ou menos */
-    max-width: 395px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 350px;
-    max-height: 395px;
+  background: #191919;
+  padding: 15px;
+  border-radius: 12px;
+  flex: 1 1 calc(30% - 20px);   /* 3 por linha, ajuste aqui se quiser mais ou menos */
+  max-width: 395px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-height: 395px;
 }
 .cardVolun:hover {
     transform: translateY(-3px);
@@ -753,6 +760,37 @@ nav ul li a:hover::after {
         justify-content: center;
         margin-left: 0;
     }
+    .tab {
+      max-width: 100%;
+    }
+
+    .portfolio {
+      margin-left: -60px;
+      margin-right: -80px;
+
+  }
+
+  .card, .cardCert, .cardVolun{
+    max-width: 100%;
+}
+.cardVolun-footer button {
+  margin-left: 250px;
+}
+.card-footer a {
+  color: #8361ff;
+  text-decoration: flex;
+  font-size: 18px;
+  
+}
+
+.card-footer button{
+  padding: 10px 35px;
+  font-size: 18px;
+}
+.cardVolun-footer button {
+  padding: 10px 35px;
+  font-size: 18px;
+}
 }
 
 
@@ -971,21 +1009,21 @@ nav ul li a:hover::after {
 
   @media (max-width: 768px) {
     .left h1 {
-      font-size: 50px;
-      margin-left: 20px;
+      font-size: 35px;
+      margin-left: -15px;
       padding-right: 50px;
 
     }
   
     .left p {
       font-size: 16px;
-      margin-left: 20px;
-      padding-right: 50px;
+      margin-left: -15px;
+      padding-right: 70px;
     }
   
     .btnser {
       bottom: -15px;
-      right: 60px;
+      margin-right: 15%;
       padding: 10px 20px;
       font-size: 17px;
     }
@@ -1048,13 +1086,12 @@ nav ul li a:hover::after {
     color: white;
     font-size: 16px;
     border-radius: 15px;
-    resize: none;
     font-family: 'Kulim Park';
     height: 48px;
     transition: 0.3s;
     width:600px;
   }
-  
+ 
   .form-left textarea {
     height: 200px;
     font-family: 'Kulim Park';
@@ -1159,7 +1196,7 @@ nav ul li a:hover::after {
     text-align: right;
   }
   .underline {
-    margin-left: 65%;
+    margin-left: 50%;
   }
   .bottom-message {
     text-align: right;
