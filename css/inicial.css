@@ -348,7 +348,7 @@ nav ul li a:hover::after {
     border: 3px solid #8361FF;
     box-shadow: 0 0 20px rgba(131, 97, 255, 0.8);
     object-fit: cover;
-    margin-right:200px;
+    margin-right:2000px;
 }
 
 .estatisticas {
