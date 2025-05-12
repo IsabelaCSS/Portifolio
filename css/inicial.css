@@ -769,9 +769,7 @@ nav ul li a:hover::after {
   .card, .cardCert, .cardVolun{
     max-width: 100%;
 }
-.cardVolun-footer button {
-  margin-left: 235px;
-}
+
 .card-footer a {
   color: #8361ff;
   text-decoration: flex;
