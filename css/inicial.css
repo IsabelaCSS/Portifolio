@@ -704,11 +704,6 @@ nav ul li a:hover::after {
     margin-left: 10px;
   }
   
-  .cardVolun-footer a {
-    color: #8361ff;
-    text-decoration: none;
-    font-size: 14px;
-  }
   
   .cardVolun-footer button {
     background: #2c2c2c;
@@ -727,16 +722,7 @@ nav ul li a:hover::after {
     border-radius: 6px;
     margin-bottom: 15px;
 }
-.cardVolun-footer button {
-    background: #2c2c2c;
-    color: white;
-    border: none;
-    padding: 6px 14px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 14px;
-    margin-left: 260px;
-  }
+
 
  @media (max-width: 768px) {
   .portfolio {
