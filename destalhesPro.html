@@ -41,10 +41,12 @@
   <div class="project-container">
     <div class="left-content">
       <h1 class="project-title">Nome do Projeto</h1>
-      <p class="project-description">
-        descricao
-      </p>
+        <div class="project-description" id="description1">
+        Aqui vai uma descrição longa do projeto... 
+      </div>
+      <button class="read-more-btn" onclick="toggleText('description1', this)">▼ Ver mais</button>
 
+      <br>
       <a href="#" class="btn-download">
         <img src="img/vermais.png" width="15px" height="15px">Ver Detalhes
       </a>
@@ -186,6 +188,36 @@
     document.querySelector("nav ul").classList.remove("open");
   }
   
+</script>
+
+<script>
+  function toggleText(id, btn) {
+  const desc = document.getElementById(id);
+  desc.classList.toggle("expandido");
+  btn.textContent = desc.classList.contains("expandido") ? "▲ Ver menos" : "▼ Ver mais";
+}
+
+</script>
+
+<!-- Dentro do body, no final, antes do </body> -->
+<div id="image-modal" class="image-modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="modal-img">
+</div>
+<script>
+  document.addEventListener("click", function (e) {
+  if (e.target.closest(".project-image img")) {
+    const modal = document.getElementById("image-modal");
+    const modalImg = document.getElementById("modal-img");
+    modalImg.src = e.target.src;
+    modal.style.display = "block";
+  }
+});
+
+function closeModal() {
+  document.getElementById("image-modal").style.display = "none";
+}
+
 </script>
 </body>
 </html>

@@ -203,6 +203,8 @@ nav ul li a:hover::after {
     margin-bottom: 30px;
     font-family: 'Kulim Park';
     font-size: 13px;
+    text-align: justify;
+
   }
   .image img {
     display: none;

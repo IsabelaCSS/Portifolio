@@ -6,6 +6,7 @@
   <title>Nome do Voluntariado</title>
   <link href="https://fonts.googleapis.com/css2?family=Kulim+Park&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/detalhesvolun.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -13,15 +14,24 @@
   <header>
     <div class="logo">Portfólio</div>
     <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="index.html">Sobre Mim</a></li>
-            <li><a href="index.html">Portfólio</a></li>
-            <li><a href="index.html">Conhecimentos</a></li>
-            <li><a href="index.html">Serviços</a></li>
-            <li><a href="index.html">Contato</a></li>
-        </ul>
+      <div class="menu-icon" onclick="openMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+  
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">Sobre Mim</a></li>
+        <li><a href="index.html">Portfólio</a></li>
+        <li><a href="index.html">Conhecimentos</a></li>
+        <li><a href="index.html">Serviços</a></li>
+        <li><a href="index.html">Contato</a></li>
+        <div class="close-icon" onclick="closeMenu()">
+          <i class="fa-solid fa-circle-xmark"></i>
+        </div>
+      </ul>
     </nav>
+    <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+
   </header>
 
   <section class="project-page">
@@ -30,10 +40,13 @@
     <div class="project-container">
       <div class="left-content">
         <h1 class="project-title">Nome do Voluntariado</h1>
-        <p class="project-description">Descrição do voluntariado.</p>
-  
+       <div class="project-description" id="description1">
+        Aqui vai uma descrição longa do projeto... 
+      </div>
+      <button class="read-more-btn" onclick="toggleText('description1', this)">▼ Ver mais</button>
+
         <a href="#" class="btn-download">
-          <img src="img/vermais.png" width="20px" height="20px">Ver Mais
+          <img src="img/vermais.png" width="20px" height="20px">Ver Detalhes
         </a>
       </div>
   
@@ -47,6 +60,18 @@
   </section>
   
 
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+  function openMenu() {
+    document.querySelector("nav ul").classList.add("open");
+  }
+
+  function closeMenu() {
+    document.querySelector("nav ul").classList.remove("open");
+  }
+  
+</script>
 <script>
 // Dados do portfólio com os voluntariados
 const dadosPortfolio = {
@@ -98,5 +123,49 @@ window.onload = carregarVoluntariado;
 <footer class="footer">
   <p>&copy; 2025 Isabela De Oliveira Alves. Todos os direitos reservados.</p>
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+  function openMenu() {
+    document.querySelector("nav ul").classList.add("open");
+  }
+
+  function closeMenu() {
+    document.querySelector("nav ul").classList.remove("open");
+  }
+  
+</script>
+
+<script>
+  function toggleText(id, btn) {
+  const desc = document.getElementById(id);
+  desc.classList.toggle("expandido");
+  btn.textContent = desc.classList.contains("expandido") ? "▲ Ver menos" : "▼ Ver mais";
+}
+
+</script>
+
+<!-- Dentro do body, no final, antes do </body> -->
+<div id="image-modal" class="image-modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="modal-img">
+</div>
+<script>
+  document.addEventListener("click", function (e) {
+  if (e.target.closest(".project-image img")) {
+    const modal = document.getElementById("image-modal");
+    const modalImg = document.getElementById("modal-img");
+    modalImg.src = e.target.src;
+    modal.style.display = "block";
+  }
+});
+
+function closeModal() {
+  document.getElementById("image-modal").style.display = "none";
+}
+
+</script>
+
 </body>
 </html>

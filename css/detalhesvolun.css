@@ -1,21 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Kulim+Park&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Konkhmer+Sleokchher&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Kulim+Park&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Konkhmer+Sleokchher&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-    
-}
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+      
+  }
 
-body {
-    background-color: #272727;
-    color: white;
-    margin-top: 120px;
-}
+  body {
+      background-color: #272727;
+      color: white;
+      margin-top: 120px;
+  }
 
-header {
+  header {
     position: fixed;
     top: 0;
     width: 100%;
@@ -26,37 +26,37 @@ header {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.4);
-}
+  }
 
 
-.logo {
+  .logo {
     color: #8361FF;
     font-size: 24px;
     font-weight: bold;
-}
+  }
 
-nav ul {
+  nav ul {
     list-style: none;
     display: flex;
     gap: 30px;
-}
+  }
 
-nav ul li a {
+  nav ul li a {
     text-decoration: none;
     color: white;
     font-weight: bold;
     position: relative;
-}
+  }
 
-nav ul li a.active,
-nav ul li a:hover {
+  nav ul li a.active,
+  nav ul li a:hover {
     color: #8361FF;
     transition: 0.3s;
 
-}
+  }
 
-nav ul li a.active::after,
-nav ul li a:hover::after {
+  nav ul li a.active::after,
+  nav ul li a:hover::after {
     content: '';
     position: absolute;
     left: 0;
@@ -66,109 +66,264 @@ nav ul li a:hover::after {
     background-color: #8361FF;
     transition: 0.3s;
 
+  }
+  nav .menu-icon{
+  cursor: pointer;
+  font-size: 25px;
+  color: #fff;
+  display: none;
+  }
+  nav .close-icon{
+  cursor: pointer;
+  display: none;
+  color: #fff;
+  font-size: 30px;
+  }
+.read-more-btn {
+  display: none;
 }
-  
-  /* Botão de voltar */
-  .btn-back {
-    background-color: #3e3e3e;
-    padding: 8px 16px;
-    border-radius: 6px;
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-    display: inline-block;
-    margin-top: 10px;
-    margin-left: 100px;
-    margin-bottom: 30px;
-  }
-  
-  /* Container principal */
-  .project-container {
-    display: flex;
-    gap: 40px;
-    justify-content: space-between;
-    margin-left: 100px;
-    margin-right: 100px;
 
-  }
-  
-  /* Conteúdo da esquerda */
-  .left-content {
-    flex: 1;
-  }
-  
-  .project-title {
-    text-align: left;
-    font-size: 40px;
-    color: #8361FF;
-    margin-bottom: 5px;
-    text-shadow: 1px 4px 3px rgb(49, 33, 106);
-  }
-  
-  .project-description {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 30px;
-    color: #e0e0e0;
-  }
-  
-  /* Botão de download */
-  .btn-download {
-    border: 2px solid #8361FF;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    display: inline-flex;
+  @media (max-width: 768px) {
+  nav ul {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #8361FF;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 8px;
-    margin-bottom: 30px;
-    box-shadow: 0 0 10px rgba(131, 97, 255, 0.6);
-    font-family: 'Kulim Park';
+    clip-path: circle(0% at 100% 0);
+    transition: clip-path 0.6s ease-in-out;
+    z-index: 999;
+    gap: 30px;
+  }
+
+  nav ul.open {
+    clip-path: circle(141.4% at 100% 0);
+  }
+
+  nav .menu-icon {
+    display: block;
+  }
+
+  nav .close-icon {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  nav ul li a {
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
     transition: 0.3s;
   }
-  
-  .btn-download:hover {
-    background-color: #8361FF;
-    color: #fff;
-    box-shadow: 0px 0px 20px rgba(131, 97, 255, 1);
-  }
-  
-  
-
-  
-  /* Imagem do projeto */
-  .project-image {
-    background-color: #cccccc;
-    width: 86%;
-    height: 330px;
-    border-radius: 10px;
-    margin-left: 100px;
-    object-fit: cover;
-    overflow: hidden;
+  nav ul li a:hover {
+    color: rgb(255, 255, 255);
   }
 
-  
-  /* Responsividade */
-  @media (max-width: 900px) {
+  nav ul li a.active::after,
+  nav ul li a:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    transition: 0.8s;
+
+  }
+  }
+
+    
+    /* Botão de voltar */
+    .btn-back {
+      background-color: #3e3e3e;
+      padding: 8px 16px;
+      border-radius: 6px;
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      display: inline-block;
+      margin-top: 10px;
+      margin-left: 100px;
+      margin-bottom: 30px;
+    }
+    
+    /* Container principal */
     .project-container {
-      flex-direction: column;
+      display: flex;
+      gap: 40px;
+      justify-content: space-between;
+      margin-left: 100px;
+      margin-right: 100px;
+
     }
-  
-    .right-content {
-      margin-top: 30px;
+    
+    /* Conteúdo da esquerda */
+    .left-content {
+      flex: 1;
     }
+    
+    .project-title {
+      text-align: left;
+      font-size: 40px;
+      color: #8361FF;
+      margin-bottom: 5px;
+      text-shadow: 1px 4px 3px rgb(49, 33, 106);
+    }
+    
+    .project-description {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      color: #e0e0e0;
+    }
+    
+    /* Botão de download */
+    .btn-download {
+      border: 2px solid #8361FF;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 30px;
+      box-shadow: 0 0 10px rgba(131, 97, 255, 0.6);
+      font-family: 'Kulim Park';
+      transition: 0.3s;
+    }
+    
+    .btn-download:hover {
+      background-color: #8361FF;
+      color: #fff;
+      box-shadow: 0px 0px 20px rgba(131, 97, 255, 1);
+    }
+    
+    
+
+    
+    /* Imagem do projeto */
+    .project-image {
+      background-color: #cccccc;
+      width: 86%;
+      height: 330px;
+      border-radius: 10px;
+      margin-left: 100px;
+      object-fit: cover;
+      overflow: hidden;
+    }
+
+    
+  .project-description {
+    max-height: none;
+    overflow: visible;
+    position: relative;
+    transition: max-height 0.3s ease;
+  }
+  .project-description.expandido {
+    max-height: none;
+  }
+  .read-more-btn {
+    display: none;
+  }
+    .image-modal {
+    display: none;
+    position: fixed;
+    z-index: 99;
+    padding-top: 50%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
   }
 
-  
-  
-
-  .footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #1b1b1b;
-    color: #ffffff;
-    font-family: 'Kulim Park';
-    font-size: 14px;
-    margin-top: 50px;
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 95%;
+    max-width: 100%;
   }
+
+  .image-modal .close {
+    position: absolute;
+    top: 100px;
+    right: 50px;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+  }
+
+  .read-more-btn {
+  display: none;
+}
+    /* Responsividade */
+    @media (max-width: 900px) {
+      .project-container {
+        flex-direction: column;
+        margin-left: 60px;
+        margin-right: 60px;
+        text-align: justify;
+      }
+      
+      .right-content {
+        margin-top: -10px;
+      }
+      
+      .project-image {
+      width: 90%;
+      height: 100px;
+      margin-left: 25px;
+    }
+    .btn-back {
+      margin-left: 60px;
+    }
+   .read-more-btn {
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.618);
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: -30px;
+  margin-bottom: 10px;
+  margin-left: -10px;
+  display: block;
+}
+
+ .project-description {
+  max-height: 100px;
+  overflow: hidden;
+  position: relative;
+  transition: max-height 0.3s ease;
+}
+
+  .project-description.expandido {
+    max-height: none;
+  }
+    }
+
+    
+    
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #1b1b1b;
+      color: #ffffff;
+      font-family: 'Kulim Park';
+      font-size: 14px;
+      margin-top: 50px;
+    }

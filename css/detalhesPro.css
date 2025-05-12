@@ -142,7 +142,7 @@ nav ul li a:hover::after {
 }
 
   
-  /* Botão de voltar */
+  /* Botão de voltar */ 
   .btn-back {
     background-color: #3e3e3e;
     padding: 8px 16px;
@@ -197,6 +197,7 @@ nav ul li a:hover::after {
     display: inline-flex;
     align-items: center;
     gap: 8px;
+    margin-top: -30px;
     margin-bottom: 30px;
     box-shadow: 0 0 10px rgba(131, 97, 255, 0.6);
     font-family: 'Kulim Park';
@@ -278,16 +279,93 @@ nav ul li a:hover::after {
     margin-bottom: 10px;
     font-size: 16px;
   }
-  
+
+.project-description {
+  max-height: none;
+  overflow: visible;
+  position: relative;
+  transition: max-height 0.3s ease;
+}
+ .project-description.expandido {
+  max-height: none;
+}
+.read-more-btn {
+  display: none;
+}
+  .image-modal {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  padding-top: 50%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 100%;
+}
+
+.image-modal .close {
+  position: absolute;
+  top: 100px;
+  right: 50px;
+  color: #fff;
+  font-size: 40px;
+  cursor: pointer;
+}
+
   /* Responsividade */
   @media (max-width: 900px) {
     .project-container {
       flex-direction: column;
+       margin-left: 60px;
+      margin-right: 60px;
+      text-align: justify;
     }
   
     .right-content {
-      margin-top: 30px;
+      margin-top: -10px;
     }
+    .project-image {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    overflow: hidden;
+  }
+ 
+.read-more-btn {
+  display: block;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.618);
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: -30px;
+  margin-left: -10px;
+
+}
+.project-description {
+  max-height: 100px;
+  overflow: hidden;
+  position: relative;
+}
+
+.project-description.expandido {
+  max-height: none;
+}
+.btn-back {
+    margin-left: 60px;
+  }
+  
+  
   }
   
 
@@ -364,3 +442,4 @@ nav ul li a:hover::after {
 
 }
 }
+
