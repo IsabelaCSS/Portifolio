@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nome do Voluntariado</title>
+  <title>Voluntariado</title>
   <link href="https://fonts.googleapis.com/css2?family=Kulim+Park&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/detalhesvolun.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -60,18 +60,6 @@
   </section>
   
 
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-<script>
-  function openMenu() {
-    document.querySelector("nav ul").classList.add("open");
-  }
-
-  function closeMenu() {
-    document.querySelector("nav ul").classList.remove("open");
-  }
-  
-</script>
 <script>
 // Dados do portfólio com os voluntariados
 const dadosPortfolio = {
@@ -124,6 +112,8 @@ window.onload = carregarVoluntariado;
   <p>&copy; 2025 Isabela De Oliveira Alves. Todos os direitos reservados.</p>
 </footer>
 
+
+
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script>
@@ -157,14 +147,13 @@ window.onload = carregarVoluntariado;
     const modal = document.getElementById("image-modal");
     const modalImg = document.getElementById("modal-img");
     modalImg.src = e.target.src;
-    modal.style.display = "block";
+    modal.style.display = "block"; 
   }
 });
 
 function closeModal() {
   document.getElementById("image-modal").style.display = "none";
 }
-
 </script>
 
 </body>
