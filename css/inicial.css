@@ -276,10 +276,7 @@ nav ul li a:hover::after {
     transition: 0.3s;
 }
 
-.image img {
-    margin-right: 60px;
-    height: auto;
-}
+
 
 
 
@@ -316,7 +313,7 @@ nav ul li a:hover::after {
 
 
 .texto-sobre {
-    max-width: 700px;
+    max-width: 655px;
 }
 
 .texto-sobre h3 {
@@ -349,6 +346,8 @@ nav ul li a:hover::after {
     box-shadow: 0 0 20px rgba(131, 97, 255, 0.8);
     object-fit: cover;
 }
+
+
 
 .estatisticas {
     display: flex;
@@ -430,28 +429,23 @@ nav ul li a:hover::after {
 
   .titulo-sobre {
     font-size: 40px;
-    width: 100%;
     align-items: center;
   }
 
   .resumo {
     font-size: 16px;
     align-items: center;
-    max-width: 100%;
-
   }
 
   .sobre-container {
     flex-direction: column;
     max-width: 100%;
-
 }
 
   .texto-sobre {
-    max-width: 100%;
-    padding: 0 50px;
+    max-width: 85%;
     text-align: center;
-
+    text-justify: auto;
   }
 
   .texto-sobre h1 {
@@ -464,7 +458,7 @@ nav ul li a:hover::after {
   
   .descricao-sobre {
     font-size: 17px;
-    margin-left: -10%;
+    
   }
 
   .caixa {
@@ -742,41 +736,39 @@ nav ul li a:hover::after {
     margin-left: 260px;
   }
 
-  @media (max-width: 768px) {
-    .content {
-        flex-direction: column;
-        padding: 40px 20px;
-    }
+ @media (max-width: 768px) {
+  .portfolio {
+    padding: 30px 20px;
+  }
 
-    .sobre-container {
-        flex-direction: column;
-        padding: 0 20px;
-    }
+  .titulo-portfolio {
+    margin-left: 0;
+    text-align: center;
+  }
 
-    .estatisticas {
-        flex-direction: column;
-        align-items: center;
-    }
+  .tabs {
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 10px;
+  }
 
-    .cards-portfolio {
-        justify-content: center;
-        margin-left: 0;
-    }
-    .tab {
-      max-width: 100%;
-    }
+  .tab {
+    width: 100%;
+    padding: 15px;
+    margin: 0 auto;
+  }
 
-    .portfolio {
-      max-width: 100%;
-
-
+  .content {
+    flex-direction: column;
+    padding: 10px 10px;
+    margin: 0;
   }
 
   .card, .cardCert, .cardVolun{
     max-width: 100%;
 }
 .cardVolun-footer button {
-  margin-left: 250px;
+  margin-left: 235px;
 }
 .card-footer a {
   color: #8361ff;
@@ -1011,7 +1003,7 @@ nav ul li a:hover::after {
 
   @media (max-width: 768px) {
     .left h1 {
-      font-size: 50px;
+      font-size: 40px;
       margin-left: -15px;
       padding-right: 50px;
 
@@ -1025,7 +1017,7 @@ nav ul li a:hover::after {
   
     .btnser {
       bottom: -15px;
-      margin-right: 10%;
+      align-items: center;
       padding: 10px 20px;
       font-size: 17px;
     }
