@@ -1140,6 +1140,7 @@ nav ul li a:hover::after {
     border-radius: 8px;
     font-family: 'Kulim Park';
     width: 150px;
+
 }
 
 .btnmsg:hover {
