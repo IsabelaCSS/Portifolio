@@ -283,9 +283,9 @@
       }
       
       .project-image {
-      width: 90%;
-      height: 100px;
-      margin-left: 25px;
+      max-width: 100%;
+      max-height: 100px;
+      margin-left: 30px;
     }
     .btn-back {
       margin-left: 30px;
@@ -302,7 +302,9 @@
   margin-left: -10px;
   display: block;
 }
-
+  .image-modal {
+  padding-top: 60%;
+}
  .project-description {
   max-height: 100px;
   overflow: hidden;
