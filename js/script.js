@@ -141,7 +141,7 @@ const words = ["Web", "Front-end", "Back-end", "Full-stack", "Mobile"];
       <h3>${volun.titulo}</h3>
       <p>${volun.descricao}</p>
       <div class="cardVolun-footer">
-        <a href="detalhesvolun.html?voluntariado=${volun.id}"><button>Detalhes</button></a>
+        <a href="detalhesVolun.html?voluntariado=${volun.id}"><button>Detalhes</button></a>
       </div>
     `;
     return card;
