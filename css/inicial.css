@@ -574,7 +574,7 @@ nav ul li a:hover::after {
 }
 .card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 20px rgb(73, 73, 73);
     transition: all 0.3s ease;
   }
   
@@ -1296,3 +1296,5 @@ nav ul li a:hover::after {
   height: 30px;
 }
 }
+
+

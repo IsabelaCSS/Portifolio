@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Isabela</title>
     <link rel="stylesheet" type="text/css" href="css/inicial.css"/>
+        <link rel="stylesheet" type="text/css" href="css/initialwhite.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
@@ -35,6 +36,7 @@
 
 <section class="content1">
     <div class="text">
+
         <h1><strong>Developer</strong></h1>
         <h2><span class="highlight" id="typed-text">Web</span></h2>
         <p class="subtitle">Estudante de Programação</p>
@@ -73,6 +75,7 @@
             <img src="img/perfil.jpeg" alt="Foto de Isabela">
         </div>
     </div>
+      <button onclick="toggleModoClaro()">Alternar Modo Claro</button>
 
     <div class="estatisticas">
         <div class="caixa">
@@ -434,6 +437,7 @@
     </div>
   </div>
 
+
   <footer class="footer">
     <p>&copy; 2025 Isabela De Oliveira Alves. Todos os direitos reservados.</p>
   </footer>
@@ -449,6 +453,11 @@
     document.querySelector("nav ul").classList.remove("open");
   }
   
+</script>
+<script>
+function toggleModoClaro() {
+  document.body.classList.toggle('light-mode');
+}
 </script>
 
 

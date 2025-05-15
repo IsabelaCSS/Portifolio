@@ -1,0 +1,150 @@
+body.light-mode {
+  background-color: #e7e7e7;
+  color: #000000;
+}
+
+body.light-mode header {
+  background-color: #f6f4ff;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .logo {
+  color: #5e46d2;
+}
+
+body.light-mode nav ul li a {
+  color: #1c1c1c;
+}
+
+body.light-mode nav ul li a.active,
+body.light-mode nav ul li a:hover {
+  color: #5e46d2;
+}
+
+body.light-mode nav ul li a.active::after,
+body.light-mode nav ul li a:hover::after {
+  background-color: #5e46d2;
+}
+
+body.light-mode .btn{
+      color: #1c1c1c;
+  background-color: #e7e7e7;
+  border: 2px solid #5e46d2;
+}
+body.light-mode .btn1 {
+  color: #e7e7e7;
+  background-color: #5e46d2;
+  border: 2px solid #5e46d2;
+}
+
+body.light-mode .btn:hover,
+body.light-mode .btn1:hover {
+  background-color: #5e46d2;
+  color: white;
+}
+
+body.light-mode .titulo-sobre,
+body.light-mode .texto-sobre h3 {
+  color: #5e46d2;
+}
+
+body.light-mode .caixa {
+  background-color: #d1d1d1;
+  color: #1c1c1c;
+}
+
+body.light-mode .caixa strong,
+body.light-mode .caixa h3 {
+  color: #1c1c1c;
+}
+body.light-mode .icone {
+    background-color: #47369a;
+}
+
+body.light-mode .caixa p {
+  color: #2b2a2a;
+}
+body.light-mode .text h1 {
+    text-shadow: 1px 4px 3px rgb(91, 91, 91);
+}
+
+body.light-mode .sobre-mim {
+    background-color: #e7e7e7;
+    color: rgb(0, 0, 0);
+    text-shadow: 1px 4px 3px rgb(172, 172, 172);
+
+}
+
+body.light-mode .portfolio {
+    padding: 50px 80px;
+    background-color: #e7e7e7;
+    color: rgb(0, 0, 0);
+}
+
+body.light-mode .tab:hover {
+    background: #c2c2c2;
+    color: #000000;
+    box-shadow: 0px 0px 20px rgb(100, 100, 100);
+    transition: 0.1s;
+
+}
+body.light-mode .tab{
+        background: #d1d1d1;
+
+}
+
+body.light-mode .card{
+    background: #d1d1d1;
+}
+body.light-mode .card p{
+    color: #000000;
+}
+
+body.light-mode .card-footer a {
+    color: #47369a;
+  }
+body.light-mode  .card-footer button {
+    background: #aeaeae;
+    color: rgb(0, 0, 0);
+}
+body.light-mode .cardCert{
+    background: #d1d1d1;
+}
+body.light-mode .cardVolun{
+    background: #d1d1d1;
+}
+
+body.light-mode .cardVolun p{
+    color: #000000;
+}
+
+body.light-mode .cardVolun-footer a {
+    color: #47369a;
+  }
+body.light-mode  .cardVolun-footer button {
+    background: #aeaeae;
+    color: rgb(0, 0, 0);
+}
+
+ body.light-mode  .form-left input {
+    border: 1px solid #000000;
+    background: transparent;
+    color: rgb(0, 0, 0);
+  }
+
+body.light-mode  .form-left textarea {
+    border: 1px solid #000000;
+    background: transparent;
+    color: rgb(0, 0, 0);
+    
+  }
+body.light-mode .underline {
+    background: rgb(0, 0, 0);
+  }
+
+body.light-mode .footer {
+   
+    background-color: #f6f4ff;
+    color: #000000;
+  }
+  
