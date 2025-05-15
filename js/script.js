@@ -195,3 +195,8 @@ const words = ["Web", "Front-end", "Back-end", "Full-stack", "Mobile"];
       });
     });
   });
+document.querySelectorAll("nav ul li a").forEach(link => {
+  link.addEventListener("click", () => {
+    closeMenu();
+  });
+});

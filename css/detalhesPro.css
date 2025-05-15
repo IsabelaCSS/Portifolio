@@ -252,6 +252,8 @@ nav ul li a:hover::after {
     border-radius: 10px;
     object-fit: cover;
     overflow: hidden;
+    background: #272727;
+
   }
   
   /* Objetivo do Projeto */
@@ -321,7 +323,7 @@ nav ul li a:hover::after {
 }
 
   /* Responsividade */
-  @media (max-width: 900px) {
+  @media (max-width: 768px) {
    .project-container {
         flex-direction: column;
         margin-left: 30px;
@@ -338,6 +340,8 @@ nav ul li a:hover::after {
     border-radius: 10px;
     object-fit: cover;
     overflow: hidden;
+    background: #272727;
+
   }
  
 .read-more-btn {

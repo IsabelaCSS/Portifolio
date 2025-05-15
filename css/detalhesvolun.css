@@ -216,7 +216,7 @@
     
     /* Imagem do projeto */
     .project-image {
-      background-color: #cccccc;
+      background: #272727;
       width: 86%;
       height: 330px;
       border-radius: 10px;
@@ -284,7 +284,8 @@
       
       .project-image {
       max-width: 100%;
-      max-height: 100px;
+      max-height: 80px;
+      background: #272727;
       margin-left: 30px;
     }
     .btn-back {
