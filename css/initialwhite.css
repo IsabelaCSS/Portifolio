@@ -1,5 +1,5 @@
 body.light-mode {
-  background-color: #e7e7e7;
+  background-color: #f2f2f2;
   color: #000000;
 }
 
@@ -37,11 +37,11 @@ body.light-mode nav ul li a:hover::after {
 
 body.light-mode .btn{
       color: #1c1c1c;
-  background-color: #e7e7e7;
+  background-color: #f2f2f2;
   border: 2px solid #5e46d2;
 }
 body.light-mode .btn1 {
-  color: #e7e7e7;
+  color: #f2f2f2;
   background-color: #5e46d2;
   border: 2px solid #5e46d2;
 }
@@ -62,11 +62,14 @@ body.light-mode .texto-sobre h3 {
 body.light-mode .caixa {
   background-color: #d1d1d1;
   color: #1c1c1c;
+      text-shadow: 1px 4px 3px rgb(233, 233, 233);
 }
 
 body.light-mode .caixa strong,
 body.light-mode .caixa h3 {
   color: #1c1c1c;
+      text-shadow: 1px 4px 3px rgb(255, 255, 255);
+
 }
 body.light-mode .icone {
     background-color: #5e46d2;
@@ -80,7 +83,7 @@ body.light-mode .text h1 {
 }
 
 body.light-mode .sobre-mim {
-    background-color: #e7e7e7;
+    background-color: #f2f2f2;
     color: rgb(0, 0, 0);
     text-shadow: 1px 4px 3px rgb(172, 172, 172);
 
@@ -88,7 +91,7 @@ body.light-mode .sobre-mim {
 
 body.light-mode .portfolio {
     padding: 50px 80px;
-    background-color: #e7e7e7;
+    background-color: #f2f2f2;
     color: rgb(0, 0, 0);
 }
 
@@ -284,12 +287,12 @@ body.light-mode nav .menu-icon{
   }
 
   body.light-mode .project-objective {
-    background-color: #aeaeae;
+    background-color: #d1d1d1;
   }
 
   /* Botão de voltar */ 
   body.light-mode .btn-back {
-    background-color: #aeaeae;
+    background-color: #d1d1d1;
     color: rgb(0, 0, 0);
   }
 
@@ -313,6 +316,11 @@ body.light-mode nav .menu-icon{
   }
 
    body.light-mode .project-image {
-    background: #e7e7e7;
+    background: #f2f2f2;
 
+  }
+
+  .project-objective h3 {
+    color: #000000;
+    text-shadow: 1px 4px 3px rgb(255, 255, 255);
   }
