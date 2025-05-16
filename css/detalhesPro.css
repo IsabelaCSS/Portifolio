@@ -80,6 +80,52 @@ color: #fff;
 font-size: 30px;
 }
 
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+  margin-left: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Bolinha */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 25px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 19px;
+  width: 19px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #8361FF;
+}
+
+input:checked + .slider:before {
+  transform: translateX(25px);
+}
 @media (max-width: 768px) {
 nav ul {
   position: fixed;
@@ -138,6 +184,17 @@ nav ul li a:hover::after {
   background-color: #ffffff;
   transition: 0.8s;
 
+}
+.slider {
+  background-color: #262626;
+}
+
+.slider:before {
+  background-color: white;
+}
+
+input:checked + .slider {
+  background-color: #ccc;
 }
 }
 

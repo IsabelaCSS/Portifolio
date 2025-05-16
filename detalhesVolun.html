@@ -6,12 +6,13 @@
   <title>Voluntariado</title>
   <link href="https://fonts.googleapis.com/css2?family=Kulim+Park&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/detalhesvolun.css">
+    <link rel="stylesheet" type="text/css" href="css/initialwhite.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-  <header>
+    <header>
     <div class="logo">Portfólio</div>
     <nav>
       <div class="menu-icon" onclick="openMenu()">
@@ -28,11 +29,19 @@
         <div class="close-icon" onclick="closeMenu()">
           <i class="fa-solid fa-circle-xmark"></i>
         </div>
+        <label class="switch">
+  <input type="checkbox" onclick="toggleModoClaro()" id="modoClaroToggle">
+  <span class="slider round"></span>
+</label>
       </ul>
+
+
+
     </nav>
     <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
 
   </header>
+
 
   <section class="project-page">
     <a href="index.html" class="btn-back">&lt; Voltar</a>
@@ -157,6 +166,23 @@ function closeModal() {
 
 
 </script>
+<script>
+// Aplica o modo claro ao carregar a página
+window.addEventListener('DOMContentLoaded', () => {
+  const modoClaroAtivo = localStorage.getItem('modoClaro') === 'true';
+  if (modoClaroAtivo) {
+    document.body.classList.add('light-mode');
+    const checkbox = document.getElementById('modoClaroToggle');
+    if (checkbox) checkbox.checked = true;
+  }
+});
 
+// Alterna o modo claro e salva no localStorage
+function toggleModoClaro() {
+  document.body.classList.toggle('light-mode');
+  const modoClaroAtivo = document.body.classList.contains('light-mode');
+  localStorage.setItem('modoClaro', modoClaroAtivo);
+}
+</script>
 </body>
 </html>

@@ -77,7 +77,52 @@ nav .close-icon{
   color: #fff;
   font-size: 30px;
 }
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+  margin-left: 20px;
+}
 
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Bolinha */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 25px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 19px;
+  width: 19px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #8361FF;
+}
+
+input:checked + .slider:before {
+  transform: translateX(25px);
+}
 @media (max-width: 768px) {
   nav ul {
     position: fixed;
@@ -136,6 +181,18 @@ nav ul li a:hover::after {
     background-color: #ffffff;
     transition: 0.8s;
 
+}
+
+.slider {
+  background-color: #262626;
+}
+
+.slider:before {
+  background-color: white;
+}
+
+input:checked + .slider {
+  background-color: #ccc;
 }
 }
 
@@ -209,6 +266,7 @@ nav ul li a:hover::after {
   .image img {
     display: none;
   }
+
 }
 
 
@@ -570,8 +628,7 @@ nav ul li a:hover::after {
     flex-direction: column;
     justify-content: space-between;
     max-height: 395px;
-
-}
+    }
 .card:hover {
     transform: translateY(-3px);
     box-shadow: 0px 0px 20px rgb(73, 73, 73);
@@ -585,7 +642,7 @@ nav ul li a:hover::after {
     justify-content: flex-start;   /* ALINHA TUDO À ESQUERDA */
     padding: 20px 70px;
     justify-content: space-between;
-    
+   
   }
 .content.active {
     display: flex; /* ou block, depende do seu layout */
@@ -829,6 +886,7 @@ nav ul li a:hover::after {
     animation: scroll-left 30s linear infinite;
     will-change: transform;
     width: max-content;
+    grid-auto-flow: column;
   }
   
   @keyframes scroll-left {

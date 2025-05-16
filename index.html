@@ -17,17 +17,23 @@
         <i class="fas fa-bars"></i>
       </div>
   
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#sobre">Sobre Mim</a></li>
-        <li><a href="#portfolio">Portfólio</a></li>
-        <li><a href="#conhecimentos">Conhecimentos</a></li>
-        <li><a href="#serviços">Serviços</a></li>
-        <li><a href="#contato">Contato</a></li>
+       <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">Sobre Mim</a></li>
+        <li><a href="index.html">Portfólio</a></li>
+        <li><a href="index.html">Conhecimentos</a></li>
+        <li><a href="index.html">Serviços</a></li>
+        <li><a href="index.html">Contato</a></li>
         <div class="close-icon" onclick="closeMenu()">
           <i class="fa-solid fa-circle-xmark"></i>
         </div>
+        <label class="switch">
+  <input type="checkbox" onclick="toggleModoClaro()" id="modoClaroToggle">
+  <span class="slider round"></span>
+</label>
       </ul>
+
+
     </nav>
     <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
 
@@ -75,7 +81,6 @@
             <img src="img/perfil.jpeg" alt="Foto de Isabela">
         </div>
     </div>
-      <button onclick="toggleModoClaro()">Alternar Modo Claro</button>
 
     <div class="estatisticas">
         <div class="caixa">
@@ -454,12 +459,24 @@
   }
   
 </script>
+
 <script>
+// Aplica o modo claro ao carregar a página
+window.addEventListener('DOMContentLoaded', () => {
+  const modoClaroAtivo = localStorage.getItem('modoClaro') === 'true';
+  if (modoClaroAtivo) {
+    document.body.classList.add('light-mode');
+    const checkbox = document.getElementById('modoClaroToggle');
+    if (checkbox) checkbox.checked = true;
+  }
+});
+
+// Alterna o modo claro e salva no localStorage
 function toggleModoClaro() {
   document.body.classList.toggle('light-mode');
+  const modoClaroAtivo = document.body.classList.contains('light-mode');
+  localStorage.setItem('modoClaro', modoClaroAtivo);
 }
 </script>
-
-
 </body>
 </html>
