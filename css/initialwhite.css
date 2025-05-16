@@ -1,5 +1,5 @@
 body.light-mode {
-  background-color: #f2f2f2;
+  background-color: #ffffff;
   color: #000000;
 }
 
@@ -37,7 +37,7 @@ body.light-mode nav ul li a:hover::after {
 
 body.light-mode .btn{
       color: #1c1c1c;
-  background-color: #f2f2f2;
+  background-color: #ffffff;
   border: 2px solid #5e46d2;
 }
 body.light-mode .btn1 {
@@ -60,7 +60,7 @@ body.light-mode .texto-sobre h3 {
 }
 
 body.light-mode .caixa {
-  background-color: #d1d1d1;
+  background-color: #e5e5e5;
   color: #1c1c1c;
       text-shadow: 1px 4px 3px rgb(233, 233, 233);
 }
@@ -83,7 +83,7 @@ body.light-mode .text h1 {
 }
 
 body.light-mode .sobre-mim {
-    background-color: #f2f2f2;
+    background-color: #ffffff;
     color: rgb(0, 0, 0);
     text-shadow: 1px 4px 3px rgb(172, 172, 172);
 
@@ -91,24 +91,24 @@ body.light-mode .sobre-mim {
 
 body.light-mode .portfolio {
     padding: 50px 80px;
-    background-color: #f2f2f2;
+    background-color: #ffffff;
     color: rgb(0, 0, 0);
 }
 
 body.light-mode .tab:hover {
-    background: #c2c2c2;
+    background: #d9d9d9;
     color: #000000;
     box-shadow: 0px 0px 20px rgb(100, 100, 100);
     transition: 0.1s;
 
 }
 body.light-mode .tab{
-        background: #d1d1d1;
+        background: #e5e5e5;
 
 }
 
 body.light-mode .card{
-    background: #d1d1d1;
+    background: #e5e5e5;
 }
 body.light-mode .card p{
     color: #000000;
@@ -118,15 +118,15 @@ body.light-mode .card-footer a {
     color: #5e46d2;
   }
 body.light-mode  .card-footer button {
-    background: #aeaeae;
+    background: #c5c4c4;
     color: rgb(0, 0, 0);
 }
 body.light-mode .cardCert{
-    background: #d1d1d1;
+    background: #e5e5e5;
     color: #000000;
 }
 body.light-mode .cardVolun{
-    background: #d1d1d1;
+    background: #e5e5e5;
         color: #000000;
 
 }
@@ -139,7 +139,7 @@ body.light-mode .cardVolun-footer a {
     color: #5e46d2;
   }
 body.light-mode  .cardVolun-footer button {
-    background: #aeaeae;
+    background: #c5c4c4;
     color: rgb(0, 0, 0);
 }
 
@@ -287,12 +287,12 @@ body.light-mode nav .menu-icon{
   }
 
   body.light-mode .project-objective {
-    background-color: #d1d1d1;
+    background-color: #e5e5e5;
   }
 
   /* Botão de voltar */ 
   body.light-mode .btn-back {
-    background-color: #d1d1d1;
+    background-color: #e5e5e5;
     color: rgb(0, 0, 0);
   }
 
@@ -316,11 +316,21 @@ body.light-mode nav .menu-icon{
   }
 
    body.light-mode .project-image {
-    background: #f2f2f2;
+    background: #ffffff;
 
   }
 
-  .project-objective h3 {
+  body.light-mode .project-objective h3 {
     color: #000000;
     text-shadow: 1px 4px 3px rgb(255, 255, 255);
   }
+
+  
+ @media (max-width: 768px) {
+ 
+body.light-mode .content.active {
+    max-width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
