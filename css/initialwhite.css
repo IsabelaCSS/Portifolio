@@ -88,7 +88,12 @@ body.light-mode .sobre-mim {
     text-shadow: 1px 4px 3px rgb(172, 172, 172);
 
 }
+body.light-mode .resumo {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    text-shadow: 1px 4px 3px rgb(255, 255, 255);
 
+}
 body.light-mode .portfolio {
     padding: 50px 80px;
     background-color: #ffffff;
