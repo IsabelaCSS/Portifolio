@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Redirecionamento opcional
   setTimeout(() => {
     // window.location.href = "index.html";
-  }, 5000);
+  }, 4000);
 
   // Filtros
   const botoesFiltro = document.querySelectorAll(".filtro");

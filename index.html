@@ -6,9 +6,22 @@
     <title>Isabela</title>
     <link rel="stylesheet" type="text/css" href="css/inicial.css"/>
         <link rel="stylesheet" type="text/css" href="css/initialwhite.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+  
+ <div id="load-screen">
+    <div class="iconsinit">
+      <span class="iconinit"><img src="img/codinic.png" alt="Código"></span>
+      <span class="iconinit"><img src="img/iconuser.png" alt="Usuário"></span>
+      <span class="iconinit"><img src="img/githubicon.png" alt="GitHub"></span>
+    </div>
+     <h1 class="sejabem">Olá! Seja bem-vindo ao meu</h1>
+        <h2 class="port">Portfólio Online</h2>
+  </div>
+
+
+    
 
   <header>
     <div class="logo">Portfólio</div>
@@ -478,5 +491,29 @@ function toggleModoClaro() {
   localStorage.setItem('modoClaro', modoClaroAtivo);
 }
 </script>
+
+<script>
+    // Aguarda 4 segundos e remove a tela de carregamento com efeito fade
+    window.addEventListener("load", () => {
+      const loadScreen = document.getElementById("load-screen");
+      setTimeout(() => {
+        loadScreen.classList.add("fade-out");
+        setTimeout(() => loadScreen.remove(), 1000); // Remove da DOM após a transição
+      }, 4000);
+    });
+
+    // Seu script existente (exemplo)
+    function openMenu() {
+      document.querySelector("nav ul").classList.add("open");
+    }
+
+    function closeMenu() {
+      document.querySelector("nav ul").classList.remove("open");
+    }
+
+    function toggleModoClaro() {
+      document.body.classList.toggle("modo-claro");
+    }
+  </script>
 </body>
 </html>
