@@ -14,7 +14,7 @@ body {
 }
 #load-screen {
   position: fixed;
-  top: 0;
+  top: 0px;
   left: 0;
   width: 100vw;
   height: 100vh;
@@ -39,7 +39,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 20px;
-    margin-bottom: 20px;
+    margin-top: -50px;
     flex-wrap: wrap;
 }
 
@@ -70,7 +70,7 @@ body {
 .sejabem {
     font-size: 26px;
     font-weight: bold;
-    margin-bottom: 15px;
+    margin-top: 15px;
 }
 
 .port {
