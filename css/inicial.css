@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Kulim+Park&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Konkhmer+Sleokchher&display=swap');
+html {
+  scroll-behavior: smooth;
+}
+body,
+header,
+nav,
+ul,
+li,
+a,
+section {
+  transition: background-color 0.2s ease, color 0.s ease;
+}
 
 * {
     margin: 0;

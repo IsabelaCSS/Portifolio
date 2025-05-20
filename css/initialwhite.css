@@ -2,6 +2,12 @@ body.light-mode {
   background-color: #ffffff;
   color: #000000;
 }
+body.light-mode body,
+header,
+nav,
+section {
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
 
 body.light-mode header {
   background-color: #F8F8FF;

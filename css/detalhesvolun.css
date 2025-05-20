@@ -8,6 +8,12 @@
       font-family: sans-serif;
       
   }
+body,
+header,
+nav,
+section {
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
 
   body {
       background-color: #272727;
