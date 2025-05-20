@@ -125,16 +125,7 @@ window.onload = carregarVoluntariado;
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-<script>
-  function openMenu() {
-    document.querySelector("nav ul").classList.add("open");
-  }
 
-  function closeMenu() {
-    document.querySelector("nav ul").classList.remove("open");
-  }
-  
-</script>
 
 <script>
   function toggleText(id, btn) {
@@ -166,23 +157,40 @@ function closeModal() {
 
 
 </script>
-<script>
-// Aplica o modo claro ao carregar a página
-window.addEventListener('DOMContentLoaded', () => {
-  const modoClaroAtivo = localStorage.getItem('modoClaro') === 'true';
-  if (modoClaroAtivo) {
-    document.body.classList.add('light-mode');
-    const checkbox = document.getElementById('modoClaroToggle');
-    if (checkbox) checkbox.checked = true;
-  }
-});
 
-// Alterna o modo claro e salva no localStorage
-function toggleModoClaro() {
-  document.body.classList.toggle('light-mode');
-  const modoClaroAtivo = document.body.classList.contains('light-mode');
-  localStorage.setItem('modoClaro', modoClaroAtivo);
-}
+ <script>
+  // Aplica o modo claro ao carregar a página
+  window.addEventListener('DOMContentLoaded', () => {
+    const modoClaroAtivo = localStorage.getItem('modoClaro') === 'true';
+    if (modoClaroAtivo) {
+      document.body.classList.add('light-mode');
+      const checkbox = document.getElementById('modoClaroToggle');
+      if (checkbox) checkbox.checked = true;
+    }
+  });
+
+  // Abre o menu mobile
+  function openMenu() {
+    document.querySelector("nav ul").classList.add("open");
+  }
+
+  // Fecha o menu mobile
+  function closeMenu() {
+    document.querySelector("nav ul").classList.remove("open");
+  }
+
+  // Alterna modo claro/escuro e fecha o menu se estiver aberto
+  function toggleModoClaro() {
+    document.body.classList.toggle("light-mode");
+    const modoClaroAtivo = document.body.classList.contains("light-mode");
+    localStorage.setItem("modoClaro", modoClaroAtivo);
+
+    // Fecha o menu se estiver aberto
+    const menu = document.querySelector("nav ul");
+    if (menu.classList.contains("open")) {
+      menu.classList.remove("open");
+    }
+  }
 </script>
 </body>
 </html>
