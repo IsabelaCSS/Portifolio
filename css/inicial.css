@@ -705,16 +705,19 @@ input:checked + .slider {
   }
 
 .card {
-    background: #191919;
-    padding: 15px;
-    border-radius: 12px;
-    flex: 1 1 calc(30% - 20px);   /* 3 por linha, ajuste aqui se quiser mais ou menos */
-    max-width: 395px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    max-height: 395px;
-    }
+  background: #191919;
+  padding: 15px;
+  border-radius: 12px;
+  flex: 1 1 calc(33.333% - 20px); /* 3 por linha com gap */
+  width: 100%;                    /* para forçar ocupar o espaço total */
+  max-width: 100%;                /* padrão: ocupa toda a linha */
+  max-height: 395px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
 .card:hover {
     transform: translateY(-3px);
     box-shadow: 0px 0px 20px rgb(73, 73, 73);
@@ -730,6 +733,24 @@ input:checked + .slider {
     justify-content: space-between;
    
   }
+  /* Quando o card for o último e estiver sozinho, limita a largura */
+
+@media (min-width: 768px) {
+  .content > .card:last-child:nth-child(3n+1) {
+    max-width: 395px; /* só o último card na linha isolada */
+  }
+}
+
+@media (min-width: 1700px) {
+  .content > .card:last-child:nth-child(3n+1) {
+    max-width: 450px; /* só o último card na linha isolada */
+  }
+}
+@media (min-width: 1900px) {
+  .content > .card:last-child:nth-child(3n+1) {
+    max-width: 520px; /* só o último card na linha isolada */
+  }
+}
 .content.active {
     display: flex; /* ou block, depende do seu layout */
     max-width: 100%;

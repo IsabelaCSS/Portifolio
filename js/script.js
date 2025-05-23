@@ -21,14 +21,22 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Tabs (se usar)
-  function showTab(evt, tabName) {
-    const contents = document.querySelectorAll('.content');
-    contents.forEach(content => content.classList.remove('active'));
-    const tabs = document.querySelectorAll('.tab');
-    tabs.forEach(tab => tab.classList.remove('active'));
+ function showTab(evt, tabName) {
+  const tabContent = document.getElementById(tabName);
+  const isActive = tabContent.classList.contains('active');
+  const allContents = document.querySelectorAll('.content');
+  const allTabs = document.querySelectorAll('.tab');
+
+  // Esconde todas as abas e remove classe ativa
+  allContents.forEach(content => content.classList.remove('active'));
+  allTabs.forEach(tab => tab.classList.remove('active'));
+
+  // Se não estava ativo, ativa a aba clicada
+  if (!isActive) {
+    tabContent.classList.add('active');
     evt.currentTarget.classList.add('active');
-    document.getElementById(tabName).classList.add('active');
   }
+}
   window.showTab = showTab; // Deixa a função acessível no HTML onClick
 
   // Carrossel de Serviços
