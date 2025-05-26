@@ -584,7 +584,7 @@ input:checked + .slider {
 }
 
 }
-@media (max-width: 1400px) {
+@media (max-width: 1300px) {
 
  .foto-sobre {
     display: none;
